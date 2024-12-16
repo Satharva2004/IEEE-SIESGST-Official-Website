@@ -91,11 +91,11 @@
 }
 
 .text3 p {
-    font-size: 23px;
-    line-height: 22px;
+    font-size: 30px;
+    line-height: 23px;
     z-index: 1;
     text-align: center;
-    text-wrap: stable;
+    text-wrap:pretty;
     color: #ffff;
     position: absolute;
     top: 45%;
@@ -208,7 +208,7 @@
     --bg-color: #fff;
     --main-color: #404040;
     opacity: 1;
-    font-size: 240px;
+    font-size: 180px;
     line-height: 100px;
     z-index: 1;
     color: #ffff;
