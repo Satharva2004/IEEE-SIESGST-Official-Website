@@ -1,0 +1,246 @@
+.section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+#vanta-bg-home,
+#vanta-bg-events,
+#vanta-bg-gallery,
+#vanta-bg-contact {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#vanta-bg-about {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.text h1 {
+    --font-color: #323232;
+    --bg-color: #fff;
+    --main-color: #404040;
+    font-size: 92px;
+    line-height: 100px;
+    z-index: 1;
+    color: #ffff;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 35%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: 6px 6px var(--main-color);
+    opacity: 1;
+    position: relative;
+}
+
+.text p {
+    font-size: 30px;
+    line-height: 150px;
+    z-index: 1;
+    color: #ffff;
+    position: absolute;
+    top: 12%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    opacity: 1;
+
+}
+
+.description p {
+    font-size: 25px;
+    line-height: 30px;
+    z-index: 1;
+    color: #ffff;
+    position: absolute;
+    top: 40.5%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 100;
+    opacity: 1;
+    padding-right: -100%;
+
+}
+
+.cslogo img {
+    width: 30%;
+    z-index: 1;
+    position: fixed;
+    left: 62%;
+    top: 14%;
+}
+
+.team p {
+    font-size: 60px;
+    line-height: 150px;
+    z-index: 1;
+    color: #ffff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    opacity: 1;
+
+}
+
+.header {
+    position: fixed;
+    /* Fixed to make it stay at the top */
+    top: 0;
+    left: 0;
+    /* Aligns the header to the left of the page */
+    width: calc(100% - 17px);
+    /* Subtracts a bit from the width to avoid overlap with the scrollbar */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Transparent white background */
+    backdrop-filter: blur(10px);
+    /* The blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: shadow for better visual effect */
+    z-index: 1000;
+    padding: 42px 0;
+    /* Add some padding for spacing */
+}
+
+.header nav {
+    z-index: 1001;
+    position: fixed;
+    /* Fixed for the nav as well */
+    top: 0;
+    left: 44.5%;
+    /* Keep your alignment */
+    font-family: "Jersey 10", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    /* Adjust based on spacing needs */
+}
+
+.header li {
+    margin: 30px;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.header a:active {
+    transform: translateX(4px);
+}
+
+.header a:hover {
+    text-decoration: underline;
+    color: #a241d6;
+}
+
+
+
+
+
+
+.side {
+    width: max-content;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.top {
+    transform: rotateX(-90deg) translate3d(0, 0, 0em);
+}
+
+.front {
+    transform: translate3d(0, 0, 1em);
+}
+
+
+
+.header img {
+    width: 8%;
+    z-index: 1;
+    position: fixed;
+    left: 3%;
+    top: 5%;
+}
+
+
+
+/* From Uiverse.io by andrew-demchenk0 */
+/* before adding the photo to the div with the "card-photo" class, in the css clear the styles for .card-photo and remove .card-photo::before and .card-photo::after, then set the desired styles for .card- photo. */
+
+
+
+@media (max-width: 800px) {
+
+    .footer {
+        font: bold 14px sans-serif;
+    }
+
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer .footer-center i {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .text p {
+        font-size: 40px;
+        line-height: 150px;
+        z-index: 1;
+        color: #ffff;
+        position: absolute;
+        top: 57%;
+        left: 28.5%;
+        transform: translate(-50%, -50%);
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        opacity: 1;
+    }
+}
