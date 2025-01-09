@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Readex+Pro:wght@160..700&display=swap"
@@ -18,7 +18,11 @@
     <style>
         body,
         html {
-            margin: 0;
+            min-width: 320px;
+            max-width: 500px;
+            /* Set a max width for the layout */
+            margin: 0 auto;
+            /* Center it horizontally */
             padding: 0;
             overflow-x: hidden;
             overflow-y: auto;

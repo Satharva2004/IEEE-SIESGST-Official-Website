@@ -1111,7 +1111,7 @@
 }
 
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
 
     .footer {
         font: bold 14px sans-serif;
@@ -1277,7 +1277,7 @@
             --main-color: #404040;
             opacity: 1;
             font-size: 85px;
-            line-height: 100px;
+            line-height: 65px;
             z-index: 1;
             text-align: center;
             color: #ffff;
@@ -1317,7 +1317,7 @@
                     --font-color: #323232;
                     --bg-color: #fff;
                     --main-color: #404040;
-                    font-size: 64px;
+                    font-size: 22vw;
                     line-height: 87px;
                     z-index: 1;
                     color: #dbc4de;
