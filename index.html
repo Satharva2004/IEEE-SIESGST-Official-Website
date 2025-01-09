@@ -42,15 +42,17 @@
     <header class="header">
         <img src="IEEE SIESGST_white.png" alt="alt">
         <nav>
-            <ul>
+            <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
+            <ul class="menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about-us">About us</a></li>
+                <li><a href="#about-us">About Us</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="members.html">Members</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+
     </header>
     <div class="section" id="home">
         <div id="vanta-bg-home"></div>
@@ -61,7 +63,6 @@
         <button class="button">
             <a href="#events">Let’s go →</a>
         </button>
-
     </div>
     <div class="section" id="about-us">
         <div id="vanta-bg-about"></div>
@@ -347,22 +348,44 @@
         </footer>
 
     </div>
-    <script>
 
-        VANTA.GLOBE({
-            el: "#vanta-bg-home",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0xffffff,
-            size: 0.60,
-            backgroundColor: 0x181818,
-            speed: 2,
-        });
+    <script>
+        function toggleDropdown() {
+            const menu = document.querySelector('nav .menu');
+            menu.classList.toggle('active');
+        }
+
+        function initVantaEffect() {
+            // Destroy any existing VANTA effect if resizing
+            if (window.VANTA_EFFECT) {
+                window.VANTA_EFFECT.destroy();
+            }
+
+            // Check for mobile or desktop view
+            const isMobile = window.innerWidth <= 767;
+
+            // Apply different configurations based on screen size
+            window.VANTA_EFFECT = VANTA.GLOBE({
+                el: "#vanta-bg-home",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: true,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: isMobile ? 0.75 : 1.00, // Smaller scale for mobile
+                color: 0xffffff,
+                size: isMobile ? 5.30 : 0.60, // Smaller globe size for mobile
+                backgroundColor: 0x181818,
+                speed: isMobile ? 0.4 : 2, // Adjust speed for mobile
+            });
+        }
+
+        // Initialize VANTA effect
+        initVantaEffect();
+
+        // Reinitialize on resize to handle screen changes
+        window.addEventListener("resize", initVantaEffect);
 
         VANTA.DOTS({
             el: "#vanta-bg-events",

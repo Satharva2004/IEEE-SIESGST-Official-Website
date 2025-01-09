@@ -165,7 +165,7 @@
     position: fixed;
     /* Fixed for the nav as well */
     top: 0;
-    left: 44.5%;
+    left: 47%;
     /* Keep your alignment */
     font-family: "Jersey 10", sans-serif;
     font-style: normal;
@@ -1130,20 +1130,323 @@
         margin-left: 0;
     }
 }
-
+@media screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
 @media only screen and (max-width: 480px) {
     .text p {
-        font-size: 40px;
-        line-height: 150px;
+        font-size: 22px;
+        line-height: 20px;
         z-index: 1;
+        letter-spacing: 2px;
+        text-wrap-style:auto;
         color: #ffff;
         position: absolute;
-        top: 57%;
-        left: 28.5%;
+        top: 55%;
+        left: 50.5%;
         transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
         font-weight: 100;
-        font-style: normal;
+        text-align:center;
         opacity: 1;
     }
+        .text h1 {
+            --font-color: #323232;
+            --bg-color: #fff;
+            --main-color: #404040;
+            font-size: 130px;
+            line-height: 50px;
+            z-index: 1;
+            color: #ffff;
+            position: absolute;
+            top: 28%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "Jersey 10", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            text-shadow: 6px 6px var(--main-color);
+            opacity: 1;
+            text-wrap-mode:nowrap;
+        }
+        .header {
+            position: fixed;
+            /* Fixed to make it stay at the top */
+            top: 0;
+            left: 0;
+            /* Aligns the header to the left of the page */
+            width: calc(100% - 17px);
+            /* Subtracts a bit from the width to avoid overlap with the scrollbar */
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Transparent white background */
+            backdrop-filter: blur(10px);
+            /* The blur effect */
+            -webkit-backdrop-filter: blur(10px);
+            /* For Safari */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Optional: shadow for better visual effect */
+            z-index: 1000;
+            padding: 30px 10px;
+            /* Add some padding for spacing */
+        }
+    
+        .header img {
+            width: 17%;
+            z-index: 1;
+            position: fixed;
+            left: 3%;
+            top: 3%;
+        }
+                .header ul {
+                    display: none;
+                    /* Hide menu initially on mobile */
+                    flex-direction: column;
+                    position: absolute;
+                    top: 59px;
+                    left: 100px;
+                    width: 450%;
+                    background-color: #333;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                }
+        
+                .header ul.active {
+                    display: flex;
+                    /* Show menu when active */
+                }
+        
+                .header li {
+                    margin: 0;
+                    border-bottom: 1px solid #555;
+                }
+        
+                .header li:last-child {
+                    border-bottom: none;
+                }
+        
+                .header a {
+                    padding: 15px 25px;
+                    font-size: 14px;
+                    color: #fff;
+                }
+        
+                .menu-toggle {
+                    display: block;
+                    cursor: pointer;
+                    font-size: 20px;
+                    color: #fff;
+                    position: relative;
+                    top: 15px;
+                    left: 132px;
+                    z-index: 1002;
+                }
+        .button {
+            position: absolute;
+            top: 68%;
+            left: 31%;
+            z-index: 1;
+            --font-color: #323232;
+            --bg-color: #fff;
+            --main-color: #404040;
+            width: 125px;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--font-color);
+            cursor: pointer;
+            opacity: 1;
+        }
+    
+        .button:active {
+            box-shadow: 0px 0px var(--main-color);
+            transform: translate(3px, 3px);
+        }
+    
+        .button a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .text3 h1 {
+            --font-color: #323232;
+            --bg-color: #fff;
+            --main-color: #404040;
+            opacity: 1;
+            font-size: 85px;
+            line-height: 100px;
+            z-index: 1;
+            text-align: center;
+            color: #ffff;
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform: translate(-50%, -50%);
+            font-family: "Jersey 10", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            text-shadow: 6px 6px var(--main-color);
+        }
+        .text3 p {
+            font-size: 18px;
+            line-height: 15px;
+            z-index: 1;
+            text-align:center;
+            text-wrap: pretty;
+            color: #ffff;
+            position: absolute;
+            position:relative;
+            top: 304px;
+            left: 50%;
+            padding: 25px;
+            transform: translate(-50%, -50%);
+            font-family: "Jersey 10", sans-serif;
+            font-style: normal;
+            opacity: 1;
+        }
+                .subtext {
+                    position: relative;
+                    width: 100%;
+                    /* Ensure the container spans full width */
+                }
+        
+                .subtext h1 {
+                    --font-color: #323232;
+                    --bg-color: #fff;
+                    --main-color: #404040;
+                    font-size: 64px;
+                    line-height: 87px;
+                    z-index: 1;
+                    color: #dbc4de;
+                    font-family: "Jersey 10", sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    text-shadow: 6px 6px var(--main-color);
+                    opacity: 1;
+                    margin: 0;
+                    /* Reset margins */
+                    position: relative;
+                    /* Absolute positioning for individual placement */
+                    left: 180px;
+                    text-align: center;
+                    top: 211px;
+                    /* Center align horizontally */
+                    transform: translateX(-50%);
+                    /* Adjust for perfect centering */
+                }
+        
+                .ms {
+                    top: 50px;
+                    /* Adjust vertical positioning for MS */
+                }
+        
+                .cs {
+                    top: 52px;
+                    /* Adjust vertical positioning for CS */
+                }
+        
+                .wie {
+                    top: 75px;
+                    /* Adjust vertical positioning for WIE */
+                }
+        .btn111 a {
+            text-decoration: none;
+            color: inherit;
+        }
+    
+        .button-cs {
+            position: absolute;
+            top: 73%;
+            left: 16%;
+            z-index: 5;
+            --font-color: #323232;
+            --bg-color: #fff;
+            --main-color: #404040;
+            width: 125px;
+                height: 30px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--font-color);
+            cursor: pointer;
+            opacity: 1;
+        }
+    
+        .button-cs:active {
+            box-shadow: 0px 0px var(--main-color);
+            transform: translate(3px, 3px);
+        }
+    
+        .button-cs a {
+            text-decoration: none;
+            color: inherit;
+        }
+    
+        .button-mtts {
+            position: absolute;
+            top: 73%;
+            left: 45%;
+            z-index: 1;
+            --font-color: #323232;
+            --bg-color: #fff;
+            --main-color: #404040;
+            width: 125px;
+                height: 30px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--font-color);
+            cursor: pointer;
+            opacity: 1;
+        }
+    
+        .button-mtts:active {
+            box-shadow: 0px 0px var(--main-color);
+            transform: translate(3px, 3px);
+        }
+    
+        .button-mtts a {
+            text-decoration: none;
+            color: inherit;
+        }
+    
+        .button-wie {
+            position: absolute;
+            top: 85%;
+            left: 72%;
+            z-index: 1;
+            --font-color: #323232;
+            --bg-color: #fff;
+            --main-color: #404040;
+            width: 125px;
+                height: 30px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--font-color);
+            cursor: pointer;
+            opacity: 1;
+        }
+    
+        .button-wie:active {
+            box-shadow: 0px 0px var(--main-color);
+            transform: translate(3px, 3px);
+        }
+    
+        .button-wie a {
+            text-decoration: none;
+            color: inherit;
+        }
 }

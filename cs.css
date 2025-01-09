@@ -79,10 +79,12 @@
 }
 .cslogo img{
     width: 22%;
-        z-index: 1;
-        position: fixed;
-        left: 68%;
-        top: 22%;
+    z-index: 1;
+    position: fixed;
+    left: 68%;
+    top: 22%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
 }
 .team p {
     font-size: 60px;
@@ -191,11 +193,11 @@
 
 
 .header img {
-    width: 9.5%;
+    width: 5.5%;
     z-index: 1;
     position: fixed;
     left: 3%;
-    top: 16%;
+    top: 3%;
 }
 
 
