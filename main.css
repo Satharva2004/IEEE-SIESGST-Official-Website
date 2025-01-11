@@ -1359,8 +1359,8 @@
     
         .button-cs {
             position: absolute;
-            top: 73%;
-            left: 16%;
+            top: 90%;
+            left: 26%;
             z-index: 5;
             --font-color: #323232;
             --bg-color: #fff;
