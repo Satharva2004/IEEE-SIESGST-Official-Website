@@ -1141,13 +1141,12 @@
         line-height: 20px;
         z-index: 1;
         letter-spacing: 2px;
-        text-wrap-style:auto;
         color: #ffff;
         position: absolute;
-        margin-top: 12.5%;
-        margin-left: 20%;
-        display: flex;
-        text-align: center;
+        padding: 0px;
+        margin-top: 1.5%;
+        margin-left: 22%;
+        
         transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
         font-weight: 100;
@@ -1163,9 +1162,10 @@
             z-index: 1;
             color: #ffff;
             position: absolute;
-            margin-top: 39.5%;
+            margin-top: 50.5%;
             margin-left: 25%;
-            display: flex;
+            align-content: center;
+            text-align: center;
             transform: translate(-50%, -50%);
             font-family: "Jersey 10", sans-serif;
             font-weight: 600;
@@ -1174,34 +1174,69 @@
             opacity: 1;
             text-wrap-mode:nowrap;
         }
-        .header {
-            position: fixed;
-            /* Fixed to make it stay at the top */
-            top: 0;
-            left: 0;
-            /* Aligns the header to the left of the page */
-            width: calc(100% - 17px);
-            /* Subtracts a bit from the width to avoid overlap with the scrollbar */
-            background-color: rgba(255, 255, 255, 0.1);
-            /* Transparent white background */
-            backdrop-filter: blur(10px);
-            /* The blur effect */
-            -webkit-backdrop-filter: blur(10px);
-            /* For Safari */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Optional: shadow for better visual effect */
-            z-index: 1000;
-            padding: 30px 10px;
-            /* Add some padding for spacing */
+        .button {
+            position: absolute ;
+            margin-top: -5%;
+            margin-left: 25%;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+                align-content: center;
+                text-align: center;
+            --font-color: #323232;
+            --bg-color: #fff;
+            --main-color: #404040;
+            width: 125px;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--font-color);
+            cursor: pointer;
+            opacity: 1;
         }
     
-        .header img {
-            width: 17%;
-            z-index: 1;
-            position: fixed;
-            left: 3%;
-            top: 3%;
+        .button:active {
+            box-shadow: 0px 0px var(--main-color);
+            transform: translate(3px, 3px);
         }
+    
+        .button a {
+            text-decoration: none;
+            color: inherit;
+        }
+                .header {
+                    position: fixed;
+                    /* Fixed to make it stay at the top */
+                    top: 0;
+                    left: 0;
+                    /* Aligns the header to the left of the page */
+                    width: calc(100% - 17px);
+                    /* Subtracts a bit from the width to avoid overlap with the scrollbar */
+                    background-color: rgba(255, 255, 255, 0.1);
+                    /* Transparent white background */
+                    backdrop-filter: blur(10px);
+                    /* The blur effect */
+                    -webkit-backdrop-filter: blur(10px);
+                    /* For Safari */
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    /* Optional: shadow for better visual effect */
+                    z-index: 1000;
+                    padding: 30px 10px;
+                    /* Add some padding for spacing */
+                }
+        
+                .header img {
+                    width: 17%;
+                    z-index: 1;
+                    position: fixed;
+                    margin-left: 0%;
+                    margin-top: 0%;
+                }
+        
                 .header ul {
                     display: none;
                     /* Hide menu initially on mobile */
@@ -1240,41 +1275,10 @@
                     font-size: 20px;
                     color: #fff;
                     position: relative;
-                    top: 15px;
-                    left: 132px;
+                    margin-top: 15px;
+                    margin-left: 132px;
                     z-index: 1002;
                 }
-        .button {
-            position: absolute;
-            top: 68%;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-            --font-color: #323232;
-            --bg-color: #fff;
-            --main-color: #404040;
-            width: 125px;
-            height: 30px;
-            border-radius: 5px;
-            border: 2px solid var(--main-color);
-            background-color: var(--bg-color);
-            box-shadow: 4px 4px var(--main-color);
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--font-color);
-            cursor: pointer;
-            opacity: 1;
-        }
-    
-        .button:active {
-            box-shadow: 0px 0px var(--main-color);
-            transform: translate(3px, 3px);
-        }
-    
-        .button a {
-            text-decoration: none;
-            color: inherit;
-        }
         .text3 h1 {
             --font-color: #323232;
             --bg-color: #fff;
