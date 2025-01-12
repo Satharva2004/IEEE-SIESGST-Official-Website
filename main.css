@@ -1290,8 +1290,8 @@
             text-align: center;
             color: #ffff;
             position: absolute;
-            left: 50%;
-            top: 15%;
+            margin-left: 1%;
+            margin-top: 15%;
             transform: translate(-50%, -50%);
             font-family: "Jersey 10", sans-serif;
             font-weight: 600;
@@ -1302,21 +1302,18 @@
             font-size: 18px;
             line-height: 15px;
             z-index: 1;
-            text-align:center;
-            text-wrap: pretty;
             color: #ffff;
             position: absolute;
-            position:relative;
-            top: 304px;
+            margin-top: -17%;
             left: 50%;
-            padding: 25px;
+            padding: -100%;
             transform: translate(-50%, -50%);
             font-family: "Jersey 10", sans-serif;
             font-style: normal;
             opacity: 1;
         }
                 .subtext {
-                    position: relative;
+                    position: absolute;
                     width: 100%;
                     /* Ensure the container spans full width */
                 }
@@ -1340,24 +1337,24 @@
                     /* Absolute positioning for individual placement */
                     left: 180px;
                     text-align: center;
-                    top: 211px;
+                    top: 350px;
                     /* Center align horizontally */
                     transform: translateX(-50%);
                     /* Adjust for perfect centering */
                 }
         
                 .ms {
-                    top: 50px;
+                    top: 100px;
                     /* Adjust vertical positioning for MS */
                 }
         
                 .cs {
-                    top: 52px;
+                    top: 150px;
                     /* Adjust vertical positioning for CS */
                 }
         
                 .wie {
-                    top: 75px;
+                    top: 200px;
                     /* Adjust vertical positioning for WIE */
                 }
         .btn111 a {
