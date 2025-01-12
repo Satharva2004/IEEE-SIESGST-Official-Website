@@ -1145,7 +1145,10 @@
         color: #ffff;
         position: absolute;
         top: 55%;
-        left: 50.5%;
+        justify-content: right;
+            align-items: center;
+            align-self: center;
+            display: flex;
         transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
         font-weight: 100;
@@ -1162,7 +1165,10 @@
             color: #ffff;
             position: absolute;
             top: 28%;
-            left: 50%;
+            justify-content:right;
+            align-items: center;
+            align-self: center;
+            display: flex;
             transform: translate(-50%, -50%);
             font-family: "Jersey 10", sans-serif;
             font-weight: 600;
@@ -1244,7 +1250,8 @@
         .button {
             position: absolute;
             top: 68%;
-            left: 31%;
+            justify-content: center;
+            align-items: center;
             z-index: 1;
             --font-color: #323232;
             --bg-color: #fff;
