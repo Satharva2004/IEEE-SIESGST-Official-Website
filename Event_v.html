@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Readex+Pro:wght@160..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="main.js"></script>
     <script src="members.html"></script>
     <script src="cs.html"></script>
@@ -25,7 +27,7 @@
             overflow-x: hidden;
             overflow-y: auto;
             width: 100%;
-            height: 100%;
+            /* height: 100%; */
             background-color: #181818;
             scroll-behavior: smooth;
         }
@@ -38,6 +40,121 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
 
+    <style>
+    
+        /*--------------------------------------------------------------
+        # Speakers Section
+        --------------------------------------------------------------*/
+        .row{
+            margin-top: -70vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-evenly;
+        }
+        .c{
+            /* width: 210px; */
+            height: auto;
+        }
+        .speaker img{
+            width: 300px;
+            height: auto;
+            
+        }
+        #speakers {
+          padding: 20px 0 20px 0;
+          display: inline-block;
+        }
+        
+        #speakers .speaker {
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 30px;
+        }
+        
+        #speakers .speaker .details {
+          background: rgba(6, 12, 34, 0.76);
+          position: absolute;
+          left: 0;
+          bottom: -30px;
+          right: 0;
+          text-align: center;
+          padding-top: 10px;
+          transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        
+        #speakers .speaker .details h3 {
+          color: #fff;
+          font-size: 22px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        
+        #speakers .speaker .details p {
+          color: #fff;
+          font-size: 15px;
+          margin-bottom: 10px;
+          font-style: italic;
+        }
+        
+        #speakers .speaker .details .social {
+          height: 30px;
+        }
+        
+        #speakers .speaker .details a {
+          color: #fff;
+        }
+        
+        #speakers .speaker .details a:hover {
+          color: #f82249;
+        }
+        
+        #speakers .speaker:hover .details {
+          bottom: 0;
+        }
+        
+        #speakers-details {
+          padding: 60px 0;
+        }
+        
+        #speakers-details .details h2 {
+          color: #112363;
+          font-size: 28px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        
+        #speakers-details .details .social {
+          margin-bottom: 15px;
+        }
+        
+        #speakers-details .details .social a {
+          background: #e9edfb;
+          color: #112363;
+          line-height: 1;
+          display: inline-block;
+          text-align: center;
+          border-radius: 50%;
+          width: 36px;
+          height: 36px;
+          padding-top: 9px;
+        }
+        
+        #speakers-details .details .social a:hover {
+          background: #f82249;
+          color: #fff;
+        }
+        
+        #speakers-details .details .social a i {
+          font-size: 18px;
+        }
+        
+        #speakers-details .details p {
+          color: #112363;
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+        </style>
 </head>
 
 <body>
@@ -59,16 +176,15 @@
     <div class="section" id="about-us">
         <div id="vanta-bg-about"></div>
         <div class="text3">
-            <h1>About Us</h1>
-            <p>We are the IEEE SIES GST Student Body for the academic year 2024, dedicated to fostering a collaborative
-                environment for students interested in engineering, technology, and innovation.</p>
+            <h1> Our Events</h1>
+            <p>Here are some of our Events</p>
         </div>
-        <div class="subtext">
+        <!-- <div class="subtext">
             <h1 class="ms">mtts</h1>
             <h1 class="cs">cs</h1>
             <h1 class="wie">wie</h1>
-        </div>
-        <div class="btn111">
+        </div> -->
+        <!-- <div class="btn111">
             <button class="button-mtts"><a href="cs.html">know cs →</a></button>
             <button class="button-cs">
                 <a href="mtts.html">know mtts →</a>
@@ -76,8 +192,156 @@
             <button class="button-wie">
                 <a href="wie.html">know wie →</a>
             </button>
-        </div>
+        </div> -->
     </div>
+    <section id="speakers" class="wow fadeInUp">
+        <div class="container">
+          <!-- <div class="section-header">
+            <h2>Events</h2>
+            <p>Here are some of our Events/p>
+          </div> -->
+  
+          <div class="row">
+            <!-- <div class="c"> -->
+              <!-- <div class="speaker">
+                <img src="techopedia.jpeg" alt="Speaker 1" class="img-fluid">
+                <div class="details">
+                  <h3><a href="speaker-details.html">Brenden Legros</a></h3>
+                  <p>Quas alias incidunt</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c">
+              <div class="speaker">
+                <img src="techopedia.jpeg" alt="Speaker 2" class="img-fluid">
+                <div class="details">
+                  <h3><a href="speaker-details.html">Hubert Hirthe</a></h3>
+                  <p>Consequuntur odio aut</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c">
+              <div class="speaker">
+                <img src="techopedia.jpeg" alt="Speaker 3" class="img-fluid">
+                <div class="details">
+                  <h3><a href="speaker-details.html">Cole Emmerich</a></h3>
+                  <p>Fugiat laborum et</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="c">
+              <div class="speaker">
+                <img src="techopedia.jpeg" alt="Speaker 4" class="img-fluid">
+                <div class="details">
+                  <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
+                  <p>Debitis iure vero</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c">
+              <div class="speaker">
+                <img src="techopedia.jpeg" alt="Speaker 5" class="img-fluid">
+                <div class="details">
+                  <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
+                  <p>Qui molestiae natus</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c">
+              <div class="speaker">
+                <img src="techopedia.jpeg" alt="Speaker 6" class="img-fluid">
+                <div class="details">
+                  <h3><a href="speaker-details.html">Willow Trantow</a></h3>
+                  <p>Non autem dicta</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c">
+                <div class="speaker">
+                  <img src="techopedia.jpeg" alt="Speaker 4" class="img-fluid">
+                  <div class="details">
+                    <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
+                    <p>Debitis iure vero</p>
+                    <div class="social">
+                      <a href=""><i class="fa fa-twitter"></i></a>
+                      <a href=""><i class="fa fa-facebook"></i></a>
+                      <a href=""><i class="fa fa-google-plus"></i></a>
+                      <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c">
+                <div class="speaker">
+                  <img src="techopedia.jpeg" alt="Speaker 5" class="img-fluid">
+                  <div class="details">
+                    <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
+                    <p>Qui molestiae natus</p>
+                    <div class="social">
+                      <a href=""><i class="fa fa-twitter"></i></a>
+                      <a href=""><i class="fa fa-facebook"></i></a>
+                      <a href=""><i class="fa fa-google-plus"></i></a>
+                      <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c">
+                <div class="speaker">
+                  <img src="techopedia.jpeg" alt="Speaker 6" class="img-fluid">
+                  <div class="details">
+                    <h3><a href="speaker-details.html">Willow Trantow</a></h3>
+                    <p>Non autem dicta</p>
+                    <div class="social">
+                      <a href=""><i class="fa fa-twitter"></i></a>
+                      <a href=""><i class="fa fa-facebook"></i></a>
+                      <a href=""><i class="fa fa-google-plus"></i></a>
+                      <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+  
+      </section>
+<!--   
     <script>
         function toggleDropdown() {
             const menu = document.querySelector('nav .menu');
@@ -191,7 +455,7 @@
             x: 500,
             y: 50
         });
-    </script>
+    </script> -->
 
 </body>
 

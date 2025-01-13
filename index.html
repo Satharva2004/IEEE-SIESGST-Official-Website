@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Readex+Pro:wght@160..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      
+      <link rel="stylesheet" href="timeline.css">
+</head>
     <script src="main.js"></script>
     <script src="members.html"></script>
     <script src="cs.html"></script>
@@ -42,13 +48,13 @@
 
 <body>
     <header class="header">
-        <img src="IEEE SIESGST_white.png" alt="alt">
+        <a href="index.html"><img src="IEEE SIESGST_white.png" alt="alt"></a>
         <nav>
             <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
-                <li><a href="#events">Events</a></li>
+                <li><a href="Event_v.html">Events</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="members.html">Members</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -60,7 +66,7 @@
         <div id="vanta-bg-home"></div>
         <div class="text">
             <h1>I E E E</h1>
-            <p>IEEE SIES GST Student body academic year 2024.</p>
+            <p>IEEE SIES GST Student body academic year 2025.</p>
         </div>
         <button class="button">
             <a href="#events">Let’s go</a>
@@ -73,10 +79,10 @@
             <p>We are the IEEE SIES GST Student Body for the academic year 2024, dedicated to fostering a collaborative
                 environment for students interested in engineering, technology, and innovation.</p>
         </div>
-        <div class="subtext">
-            <h1 class="ms">mtts</h1>
-            <h1 class="cs">cs</h1>
-            <h1 class="wie">wie</h1>
+        <div class="subtext" style="margin: 50px 0;">
+            <h1 class="ms"><img  class="logo" src="MTT-S Logo (For Website 1).png"></h1>
+            <h1 class="cs"><img  class="logo" src="cs track.png"></h1>
+            <h1 class="wie"><img  class="logo"src="WIE SIESGST Logo_Violet.png"></h1>
         </div>
         <div class="btn111">
             <button class="button-mtts"><a href="cs.html">know cs →</a></button>
@@ -279,6 +285,161 @@
     </div>
 
     </div>
+
+    		<!-- Start Schedule  -->
+		<section id="mu-schedule">
+			<div class="container">
+				<div class="row">
+					<div class="colo-md-12">
+						<div class="mu-schedule-area">
+                            <div id="vanta-bg-gallery"></div>
+                            <div class="text2 t">
+                                <h1>Timeline</h1>
+                                <!-- <p>Everything we do!</p> -->
+                            </div>
+
+							<div class="mu-schedule-content-area">
+								<!-- Nav tabs -->
+								<!-- <ul class="nav nav-tabs mu-schedule-menu" role="tablist">
+								    <li role="presentation" class="active"><a href="#first-day" aria-controls="first-day" role="tab" data-toggle="tab">1 Day / 19 Feb</a></li>
+								    <li role="presentation"><a href="#second-day" aria-controls="second-day" role="tab" data-toggle="tab">2 Day / 20 Feb</a></li>
+								    <li role="presentation"><a href="#third-day" aria-controls="third-day" role="tab" data-toggle="tab">3 Day / 21 Feb</a></li>
+								    
+								</ul> -->
+
+								<!-- Tab panes -->
+								<div class="tab-content mu-schedule-content">
+								    <div role="tabpanel" class="tab-pane fade mu-event-timeline in active" id="first-day">
+								    	<ul>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">9.00 AM</p>
+								    				<h3>Techopdeia Lauch</h3>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-1.jpg" alt="event speaker">
+								    				<p class="mu-event-time">27/01/25</p>
+								    				<h3>Day 1</h3>
+								    				<span> Techopdeia</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-2.jpg" alt="event speaker">
+								    				<p class="mu-event-time">28/01/25</p>
+								    				<h3>Day 2</h3>
+								    				<span> Techopdeia</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-3.jpg" alt="event speaker">
+								    				<p class="mu-event-time">29/01/25</p>
+								    				<h3>Day 3</h3>
+								    				<span> Techopdeia</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time"> Upcoming </p>
+								    				<h3> Webniar</h3>
+								    			</div>
+								    		</li>
+								    	</ul>
+								    </div>
+								    <!-- <div role="tabpanel" class="tab-pane fade mu-event-timeline" id="second-day">
+								    	<ul>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">9.00 AM</p>
+								    				<h3>Breakfast</h3>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-1.jpg" alt="event speaker">
+								    				<p class="mu-event-time">10.00 AM</p>
+								    				<h3>Advanced SVG Animations</h3>
+								    				<span>By Karl Groves</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-2.jpg" alt="event speaker">
+								    				<p class="mu-event-time">11.00 AM</p>
+								    				<h3>Presenting Work with Confidence</h3>
+								    				<span>By Sarah Dransner</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-3.jpg" alt="event speaker">
+								    				<p class="mu-event-time">12.00 AM</p>
+								    				<h3>Keynote on UX & UI Design</h3>
+								    				<span>By Ned Stark</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">1.00 PM</p>
+								    				<h3>The End</h3>
+								    			</div>
+								    		</li>
+								    	</ul>
+								    </div>
+								    <div role="tabpanel" class="tab-pane fade mu-event-timeline" id="third-day">
+								    	<ul>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">9.00 AM</p>
+								    				<h3>Breakfast</h3>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-1.jpg" alt="event speaker">
+								    				<p class="mu-event-time">10.00 AM</p>
+								    				<h3>Advanced SVG Animations</h3>
+								    				<span>By Karl Groves</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-2.jpg" alt="event speaker">
+								    				<p class="mu-event-time">11.00 AM</p>
+								    				<h3>Presenting Work with Confidence</h3>
+								    				<span>By Sarah Dransner</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/speaker-3.jpg" alt="event speaker">
+								    				<p class="mu-event-time">12.00 AM</p>
+								    				<h3>Keynote on UX & UI Design</h3>
+								    				<span>By Ned Stark</span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">1.00 PM</p>
+								    				<h3>The End</h3>
+								    			</div>
+								    		</li>
+								    	</ul>
+								    </div>-->
+								    
+								</div>
+
+							</div> 
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Schedule -->
     <div class="section" id="contact">
         <div class="text5">
             <h1>Contact Us</h1>
@@ -304,20 +465,23 @@
                 <div itemscope itemtype="http://schema.org/PostalAddress" class="p-address">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <p>
-                        <span itemprop="streetAddress" class="p-street-address">Address : SIES Graduate School of
+                        <span itemprop="streetAddress" class="p-street-address">SIES Graduate School of
                             Technology</span>
-                        <span itemprop="addressLocality" class="p-locality">Plot 1-C D & E</span>
-                        <span itemprop="addressRegion" class="p-region">Sector-V</span>
-                        <span itemprop="postalCode" class="p-postal-code">Navi Mumbai, Maharashtra 400706</span>
+                        <span itemprop="addressRegion" class="p-region">Sri Chandrasekarendra Saraswati Vidyapuram Sector-V, Nerul</span>
+                        <span itemprop="postalCode" class="p-postal-code">Navi Mumbai, Maharashtra - 400706</span>
                     </p>
                 </div>
-                <div>
+                <!-- <div>
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <p itemprop="telephone" class="p-tel">+91 908294420</p>
-                </div>
+                </div> -->
                 <div>
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <p><a href="mailto:myname@mail.com" itemprop="email" class="u-email">ieeesidegst@mail.com</a></p>
+                    <p><a href="mailto:ieee@siesgst.ac.in" itemprop="email" class="u-email">ieee@siesgst.ac.in</a></p>
+                </div>
+                <div>
+                    <i class="fa fa-link"></i>
+                    <p><a href="mailto:ieee@siesgst.ac.in" itemprop="email" class="u-email">https://linktr.ee/ieeesiesgst</a></p>
                 </div>
             </div>
 
@@ -325,26 +489,27 @@
                 <p class="footer-about">
                     <span>About Us</span>
                     It is an active body in organising all extra-curricular activities in the
-                    college. This academic year, IEEE SIES GST saw a growth like never before within participation for
-                    most of
-                    its events
-                    having increased by leaps and bounds.
+                    college. IEEE SIESGST, a dynamic and innovative student branch of the IEEE .With subchapters dedicated to MTTS, CS and WiE we offer a diverse platform for learning, collaboration, and personal growth
+
+
                 </p>
                 <div class="footer-socials">
-                    <a href="#" rel="me" aria-label="LinkedIn" itemprop="sameAs" class="u-url"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" rel="me" aria-label="GitHub" itemprop="sameAs" class="u-url"><i
-                            class="fa-brands fa-github"></i></a>
-                    <a href="#" rel="me" aria-label="Twitter" itemprop="sameAs" class="u-url"><i
-                            class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" rel="me" aria-label="Mastodon" itemprop="sameAs" class="u-url"><i
-                            class="fa-brands fa-mastodon"></i></a>
-                    <a href="#" rel="me" aria-label="Threads" itemprop="sameAs" class="u-url"><i
-                            class="fa-brands fa-threads"></i></a>
-                    <a href="#" rel="me" aria-label="Facebook" itemprop="sameAs" class="u-url"><i
-                            class="fa-brands fa-facebook"></i></a>
-                    <a href="#" rel="me" aria-label="Instagram" itemprop="sameAs" class="u-url"><i
-                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/ieee-gst" rel="me" aria-label="LinkedIn" class="u-url">
+                        <i class="fa-brands fa-linkedin"></i>
+                      </a>
+                      <a href="https://x.com/_ieeesiesgst?s=09" rel="me" aria-label="Twitter" class="u-url">
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                      <a href="https://www.youtube.com/c/IEEESIESGST" rel="me" aria-label="YouTube" class="u-url">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a href="https://www.facebook.com/groups/714385779076148/?ref=share" rel="me" aria-label="Facebook" class="u-url">
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.instagram.com/ieeesiesgst/?hl=en" rel="me" aria-label="Instagram" class="u-url">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      
                 </div>
             </div>
         </footer>

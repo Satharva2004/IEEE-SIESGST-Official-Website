@@ -183,7 +183,7 @@
 .grid-container {
     display: grid;
     /* Enables the grid layout */
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     /* 4 cards per row */
     gap: 10px;
     /* Spacing between rows and columns */
@@ -199,8 +199,8 @@
     --font-color-sub: #7e7e7e;
     --bg-color: #111;
     --main-color: #fefefe;
-    width: 250px;
-    height: 360px;
+    width: 420px;
+    height: 390px;
     background: var(--bg-color);
     border: 2px solid var(--main-color);
     box-shadow: 4px 4px var(--main-color);
