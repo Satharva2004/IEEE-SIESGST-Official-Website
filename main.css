@@ -1306,7 +1306,8 @@
             position: absolute;
             margin-top: -17%;
             left: 50%;
-            padding: -100%;
+            padding: 0%;
+            text-wrap-mode:pretty;
             transform: translate(-50%, -50%);
             font-family: "Jersey 10", sans-serif;
             font-style: normal;
@@ -1337,14 +1338,16 @@
                     /* Absolute positioning for individual placement */
                     left: 180px;
                     text-align: center;
-                    top: 350px;
+                    top: 325px;
+                    padding: 5%;
                     /* Center align horizontally */
                     transform: translateX(-50%);
                     /* Adjust for perfect centering */
                 }
         
-                .ms {
-                    top: 100px;
+                .ms h1{
+                    top: 500px;
+                
                     /* Adjust vertical positioning for MS */
                 }
         
@@ -1364,8 +1367,8 @@
     
         .button-cs {
             position: absolute;
-            top: 90%;
-            left: 26%;
+            top: 59%;
+            left: 32%;
             z-index: 5;
             --font-color: #323232;
             --bg-color: #fff;
@@ -1395,8 +1398,8 @@
     
         .button-mtts {
             position: absolute;
-            top: 73%;
-            left: 45%;
+            top: 75%;
+            left: 32%;
             z-index: 1;
             --font-color: #323232;
             --bg-color: #fff;
@@ -1426,8 +1429,8 @@
     
         .button-wie {
             position: absolute;
-            top: 85%;
-            left: 72%;
+            top: 92%;
+            left: 32%;
             z-index: 1;
             --font-color: #323232;
             --bg-color: #fff;
