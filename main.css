@@ -1134,6 +1134,7 @@
         line-height: clamp(65px, 20vw, 25px);
         top: 40%;
         text-wrap-mode:nowrap ;
+        padding: 10%;
     }
     .text p {
         font-size: clamp(18px, 20vw, 28px);
@@ -1150,6 +1151,7 @@
         font-weight: 100;
         text-align:center;
         opacity: 1;
+        padding-top: 5%;
     }
         
         .button {
