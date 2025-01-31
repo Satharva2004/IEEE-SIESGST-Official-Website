@@ -8,15 +8,7 @@
 #vanta-bg-home,
 #vanta-bg-events,
 #vanta-bg-gallery,
-#vanta-bg-contact {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
+#vanta-bg-contact,
 #vanta-bg-about {
     width: 100%;
     height: 100%;
@@ -30,13 +22,13 @@
     --font-color: #323232;
     --bg-color: #fff;
     --main-color: #404040;
-    font-size: 280px;
-    line-height: 100px;
+    font-size: clamp(90px, 20vw, 280px);
+    line-height: clamp(50px, 15vw, 10px);
     z-index: 1;
     color: #ffff;
     position: absolute;
-    top: 20%;
-    left: 25%;
+    top: clamp(20%, 15vw, 10%);
+    left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Jersey 10", sans-serif;
     font-weight: 600;
@@ -46,23 +38,24 @@
 }
 
 .text p {
-    font-size: 40px;
-    line-height: 150px;
+    font-size: clamp(20px, 8vw, 40px);
+    line-height: clamp(50px, 2vw, 150px);
     z-index: 1;
     color: #ffff;
     position: absolute;
-    top: 57%;
-    left: 28.5%;
+    top: 59%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Jersey 10", sans-serif;
     font-weight: 100;
     font-style: normal;
+    text-align: center;
     opacity: 1;
 }
 
 .text2 p {
-    font-size: 33px;
-    line-height: 150px;
+    font-size: clamp(20px, 8vw, 40px);
+        line-height: clamp(50px, 2vw, 150px);
     z-index: 1;
     color: #ffff;
     position: absolute;
@@ -76,8 +69,8 @@
 }
 
 .text4 p {
-    font-size: 33px;
-    line-height: 150px;
+    font-size: clamp(20px, 8vw, 40px);
+        line-height: clamp(50px, 2vw, 150px);
     z-index: 1;
     color: #ffff;
     position: absolute;
@@ -91,8 +84,8 @@
 }
 
 .text3 p {
-    font-size: 30px;
-    line-height: 23px;
+    font-size: clamp(15px, 2vw, 40px);
+        line-height: clamp(28px, 0vw, 150px);
     z-index: 1;
     text-align: center;
     text-wrap:pretty;
@@ -102,7 +95,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Jersey 10", sans-serif;
-
     font-style: normal;
     opacity: 1;
 }
@@ -110,8 +102,8 @@
 /* From Uiverse.io by andrew-demchenk0 */
 .button {
     position: absolute;
-    top: 68%;
-    left: 7%;
+    top: 72%;
+    left: 45%;
     z-index: 1;
     --font-color: #323232;
     --bg-color: #fff;
@@ -156,7 +148,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Optional: shadow for better visual effect */
     z-index: 1000;
-    padding: 42px 0;
+    padding: 35px 0;
     /* Add some padding for spacing */
 }
 
@@ -208,8 +200,8 @@
     --bg-color: #fff;
     --main-color: #404040;
     opacity: 1;
-    font-size: 180px;
-    line-height: 100px;
+    font-size: clamp(50px, 15vw, 280px);
+    line-height: clamp(80px, 15vw, 100px);
     z-index: 1;
     color: #ffff;
     position: absolute;
@@ -227,8 +219,8 @@
     --bg-color: #fff;
     --main-color: #404040;
     opacity: 1;
-    font-size: 240px;
-    line-height: 100px;
+    font-size: clamp(50px, 15vw, 280px);
+    line-height: clamp(80px, 15vw, 100px);
     z-index: 1;
     color: #ffff;
     position: absolute;
@@ -246,8 +238,8 @@
     --bg-color: #fff;
     --main-color: #404040;
     opacity: 1;
-    font-size: 240px;
-    line-height: 100px;
+    font-size: clamp(50px, 15vw, 280px);
+    line-height: clamp(80px, 15vw, 100px);
     z-index: 1;
     color: #ffff;
     position: absolute;
@@ -794,12 +786,12 @@
     --font-color: #323232;
     --bg-color: #fff;
     --main-color: #404040;
-    font-size: 180px;
-    line-height: 100px;
+    font-size: clamp(20px, 8vw, 40px);
+        line-height: clamp(50px, 2vw, 150px);
     z-index: 1;
     color: #dbc4de;
     position: absolute;
-    top: 20%;
+    top: 28%;
     left: 22%;
     transform: translate(-50%, -50%);
     font-family: "Jersey 10", sans-serif;
@@ -825,11 +817,12 @@
 .btn111 a {
     text-decoration: none;
     color: inherit;
+    
 }
 
 .button-cs {
     position: absolute;
-    top: 73%;
+    top: 79%;
     left: 16%;
     z-index: 5;
     --font-color: #323232;
@@ -860,7 +853,7 @@
 
 .button-mtts {
     position: absolute;
-    top: 73%;
+    top: 79%;
     left: 45%;
     z-index: 1;
     --font-color: #323232;
@@ -891,7 +884,7 @@
 
 .button-wie {
     position: absolute;
-    top: 73%;
+    top: 79%;
     left: 72%;
     z-index: 1;
     --font-color: #323232;
@@ -1136,58 +1129,40 @@
     }
 }
 @media only screen and (max-width: 480px) {
+    .text h1{
+        font-size: clamp(70px, 30vw, 100px);
+        line-height: clamp(65px, 20vw, 25px);
+        top: 40%;
+        text-wrap-mode:nowrap ;
+    }
     .text p {
-        font-size: 22px;
-        line-height: 20px;
+        font-size: clamp(18px, 20vw, 28px);
+        line-height: clamp(20px, 15vw, 14px);
         z-index: 1;
         letter-spacing: 2px;
         color: #ffff;
         position: absolute;
         padding: 0px;
-        margin-top: 1.5%;
-        margin-left: 22%;
-        
+        top: 58%;
+        left: 50%;
         transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
         font-weight: 100;
         text-align:center;
         opacity: 1;
     }
-        .text h1 {
-            --font-color: #323232;
-            --bg-color: #fff;
-            --main-color: #404040;
-            font-size: 130px;
-            line-height: 50px;
-            z-index: 1;
-            color: #ffff;
-            position: absolute;
-            margin-top: 50.5%;
-            margin-left: 25%;
-            align-content: center;
-            text-align: center;
-            transform: translate(-50%, -50%);
-            font-family: "Jersey 10", sans-serif;
-            font-weight: 600;
-            font-style: normal;
-            text-shadow: 6px 6px var(--main-color);
-            opacity: 1;
-            text-wrap-mode:nowrap;
-        }
+        
         .button {
-            position: absolute ;
-            margin-top: -5%;
-            margin-left: 25%;
-            justify-content: center;
-            align-items: center;
+            position: relative ;
+            top: 70%;
+            left: 126px;
+            transform: translate(-50px, -50px);
             z-index: 1;
-                align-content: center;
-                text-align: center;
             --font-color: #323232;
             --bg-color: #fff;
             --main-color: #404040;
-            width: 125px;
-            height: 30px;
+            width: 100px;
+            height: 25px;
             border-radius: 5px;
             border: 2px solid var(--main-color);
             background-color: var(--bg-color);
@@ -1220,12 +1195,12 @@
                     /* Transparent white background */
                     backdrop-filter: blur(10px);
                     /* The blur effect */
-                    -webkit-backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(25px);
                     /* For Safari */
                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                     /* Optional: shadow for better visual effect */
                     z-index: 1000;
-                    padding: 30px 10px;
+                    padding: 15px 10px;
                     /* Add some padding for spacing */
                 }
         
@@ -1276,7 +1251,7 @@
                     color: #fff;
                     position: relative;
                     margin-top: 15px;
-                    margin-left: 132px;
+                    margin-left: 150px;
                     z-index: 1002;
                 }
         .text3 h1 {
@@ -1284,14 +1259,16 @@
             --bg-color: #fff;
             --main-color: #404040;
             opacity: 1;
-            font-size: 85px;
-            line-height: 65px;
+            font-size: clamp(60px, 30vw, 90px);
+                line-height: clamp(75px, 20vw, 35px);
             z-index: 1;
             text-align: center;
             color: #ffff;
             position: absolute;
             margin-left: 1%;
             margin-top: 15%;
+            
+            text-wrap-mode:nowrap;
             transform: translate(-50%, -50%);
             font-family: "Jersey 10", sans-serif;
             font-weight: 600;
@@ -1299,15 +1276,16 @@
             text-shadow: 6px 6px var(--main-color);
         }
         .text3 p {
-            font-size: 18px;
-            line-height: 15px;
+            font-size: clamp(18px, 8vw, 20px);
+            line-height: clamp(17px, 2vw, 30px);
             z-index: 1;
             color: #ffff;
             position: absolute;
-            margin-top: -17%;
+            top: 33%;
             left: 50%;
-            padding: 0%;
-            text-wrap-mode:pretty;
+            padding: -10%;
+            align-content: center;
+            text-wrap-mode:wrap;
             transform: translate(-50%, -50%);
             font-family: "Jersey 10", sans-serif;
             font-style: normal;
@@ -1319,45 +1297,31 @@
                     /* Ensure the container spans full width */
                 }
         
-                .subtext h1 {
-                    --font-color: #323232;
-                    --bg-color: #fff;
-                    --main-color: #404040;
-                    font-size: 22vw;
-                    line-height: 87px;
-                    z-index: 1;
-                    color: #dbc4de;
-                    font-family: "Jersey 10", sans-serif;
-                    font-weight: 600;
-                    font-style: normal;
-                    text-shadow: 6px 6px var(--main-color);
-                    opacity: 1;
-                    margin: 0;
-                    /* Reset margins */
-                    position: relative;
-                    /* Absolute positioning for individual placement */
-                    left: 180px;
-                    text-align: center;
-                    top: 325px;
-                    padding: 5%;
-                    /* Center align horizontally */
-                    transform: translateX(-50%);
-                    /* Adjust for perfect centering */
-                }
         
-                .ms h1{
-                    top: 500px;
-                
+                .logo1{
+                    top: 300px;
+                    width: 80x;
+                    height: 80px;
+                    left: 110px;
+                    position: absolute;
                     /* Adjust vertical positioning for MS */
                 }
         
-                .cs {
-                    top: 150px;
+                .logo2 {
+                    top: 430px;
+                        width: 60x;
+                        height: 60px;
+                        left: 100px;
+                        position: absolute;
                     /* Adjust vertical positioning for CS */
                 }
         
-                .wie {
-                    top: 200px;
+                .logo3 {
+                    top: 560px;
+                        width: 80x;
+                        height: 80px;
+                        left: 145px;
+                        position: absolute;
                     /* Adjust vertical positioning for WIE */
                 }
         .btn111 a {
@@ -1398,7 +1362,7 @@
     
         .button-mtts {
             position: absolute;
-            top: 75%;
+            top: 76%;
             left: 32%;
             z-index: 1;
             --font-color: #323232;
@@ -1429,7 +1393,7 @@
     
         .button-wie {
             position: absolute;
-            top: 92%;
+            top: 94%;
             left: 32%;
             z-index: 1;
             --font-color: #323232;
@@ -1457,6 +1421,229 @@
             text-decoration: none;
             color: inherit;
         }
+                .text2 h1 {
+                    --font-color: #323232;
+                    --bg-color: #fff;
+                    --main-color: #404040;
+                    opacity: 1;
+                    font-size: clamp(60px, 30vw, 90px);
+                        line-height: clamp(75px, 20vw, 35px);
+                    z-index: 1;
+                    color: #ffff;
+                    position: absolute;
+                    top: 9%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-family: "Jersey 10", sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    text-shadow: 6px 6px var(--main-color);
+                }
+        
+                .text4 h1 {
+                    --font-color: #323232;
+                    --bg-color: #fff;
+                    --main-color: #404040;
+                    opacity: 1;
+                    font-size: clamp(60px, 30vw, 90px);
+                        line-height: clamp(75px, 20vw, 35px);
+                    z-index: 1;
+                    color: #ffff;
+                    
+                    left: 50%;
+                    top: 20%;
+                    transform: translate(-50%, -50%);
+                    font-family: "Jersey 10", sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    margin-top: 0%;
+                    text-shadow: 6px 6px var(--main-color);
+                }
+        
+                .card0-container {
+                    display: flex;
+                    position: absolute;
+                    scroll-snap-type: x mandatory;
+                    overflow-x: scroll;
+                    width: 100%;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    gap: 20px;
+                    scroll-padding-top: 24px;
+                    border-radius: 8px;
+                    margin-top: 55%;
+                    margin-left: 2%;
+                    display: flex;
+                    overflow-x: scroll;
+                    overflow-wrap: anywhere;
+                    padding: 24px;
+                    width: 100%;
+                    scroll-snap-type: x mandatory;
+                    scroll-padding-top: 24px;
+                    border-radius: 8px;
+                    gap: 20px;
+                    z-index: 2;
+                }
+        
+                .cards-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    justify-items: center;
+                    gap: 0%;
+                    /* Add some space between the cards */
+                    padding: 50px;
+                    /* Add padding around the container */
+                    opacity: 1;
+                    text-align: center;
+                    padding-left: 10%;
+                    top: 13%;
+                    position: absolute;
+                }
+        
+                .card img,
+                .card1 img,
+                .card2 img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    /* Ensure the image covers the entire card */
+                    position: absolute;
+                    /* Position the image absolutely */
+                    top: 0;
+                    padding-left: 0%;
+                    z-index: 0;
+                    /* Place the image behind other content */
+                    opacity: 0.3;
+                    z-index: 3;
+                    /* Adjust transparency if you want to see the content more clearly */
+                }
+        
+                .card,
+                .card1,
+                .card2 {
+                    margin-top: 15%;
+                    width: 250px;
+                    height: 100px;
+                    /* Adjust the width as needed */
+                    padding: 20px;
+                    background: #000000;
+                    box-shadow: 6px 6px 0 #404040;
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    z-index: 3;
+                    /* Ensure it's on top */
+                    font-family: "Readex Pro", sans-serif;
+                    position: relative;
+                    opacity: 1;
+                }
+        
+                .card:hover,
+                .card1:hover,
+                .card2:hover {
+                    transform: translate(-5px, -5px);
+                    box-shadow: 12px 12px 0 #404040;
+                }
+        
+                .card__title,
+                .card1__title,
+                .card2__title {
+                    font-size: 20px;
+                    font-weight: 900;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                    display: block;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 4;
+                }
+        
+                .card__title::after,
+                .card1__title::after,
+                .card2__title::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 90%;
+                    height: 3px;
+                    background-color: #ffffff;
+                    transform: translateX(-100%);
+                    transition: transform 0.3s;
+                }
+        
+                .card:hover .card__title::after,
+                .card1:hover .card__title::after,
+                .card2:hover .card__title::after {
+                    transform: translateX(0);
+                }
+        
+                .card__content,
+                .card1__content,
+                .card2__content {
+                    z-index: 10;
+                    font-size: 10px;
+                    line-height: 1.4;
+                    color: #ffffff;
+                    margin-bottom: 20px;
+                    font-family: "Readex Pro", sans-serif;
+                    /* Consistent font */
+                }
+        
+                
+        
+                .card__button,
+                .card1__button,
+                .card2__button {
+                    border: 3px solid #2e2e2e;
+                    background: #404040;
+                    color: #fff;
+                    padding: 4px;
+                    font-size: 10px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+                    transition: transform 0.3s;
+                    width: 40%;
+                    height: 90%;
+                    font-family: "Readex Pro", sans-serif;
+                    /* Consistent font */
+                    z-index: 4;
+                    /* Ensure it's on top */
+                }
+        
+                .card__button::before,
+                .card1__button::before,
+                .card2__button::before {
+                    content: "Sure?";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 105%;
+                    background-color: #a241d6;
+                    color: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transform: translateY(100%);
+                    transition: transform 0.3s;
+                }
+        
+                .card__button:hover::before,
+                .card1__button:hover::before,
+                .card2__button:hover::before {
+                    transform: translateY(0);
+                }
+        
+                .card__button:active,
+                .card1__button:active,
+                .card2__button:active {
+                    transform: scale(0.95);
+                }
+                
 }
 
 
