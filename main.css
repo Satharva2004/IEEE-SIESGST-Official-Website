@@ -1135,6 +1135,7 @@
         top: 40%;
         text-wrap-mode:nowrap ;
         padding: 10%;
+        padding: 10px;
     }
     .text p {
         font-size: clamp(18px, 20vw, 28px);
@@ -1146,6 +1147,7 @@
         padding: 0px;
         top: 58%;
         left: 50%;
+        padding: 10px;
         transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
         font-weight: 100;
@@ -1184,6 +1186,7 @@
         .button a {
             text-decoration: none;
             color: inherit;
+            padding: 10px;
         }
                 .header {
                     position: fixed;
@@ -1257,6 +1260,7 @@
                     z-index: 1002;
                 }
         .text3 h1 {
+            padding: 10px;
             --font-color: #323232;
             --bg-color: #fff;
             --main-color: #404040;
@@ -1278,6 +1282,7 @@
             text-shadow: 6px 6px var(--main-color);
         }
         .text3 p {
+            
             font-size: clamp(18px, 8vw, 20px);
             line-height: clamp(17px, 2vw, 30px);
             z-index: 1;
@@ -1295,6 +1300,7 @@
         }
                                 /* Main container centers everything */
                                 .container {
+                                    padding: 10px;
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
@@ -1311,6 +1317,7 @@
                                     align-items: center;
                                     gap: 20px;
                                     margin-left: 1%;
+                                    
                                     /* Space between logos */
                                 }
                 
