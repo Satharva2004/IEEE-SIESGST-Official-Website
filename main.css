@@ -1347,7 +1347,7 @@
                 
                                 .button-cs {
                                     position: absolute;
-                                    margin-top: -2%;
+                                    margin-top: 2%;
                                     left: 32%;
                                     z-index: 5;
                                     --font-color: #323232;
@@ -1378,7 +1378,7 @@
                 
                                 .button-mtts {
                                     position: absolute;
-                                    top: 62%;
+                                    top: 63%;
                                     left: 33%;
                                     z-index: 1;
                                     --font-color: #323232;
@@ -1409,7 +1409,7 @@
                 
                                 .button-wie {
                                     position: absolute;
-                                    margin-top:32%;
+                                    margin-top:33%;
                                     left: 33%;
                                     z-index: 1;
                                     --font-color: #323232;
