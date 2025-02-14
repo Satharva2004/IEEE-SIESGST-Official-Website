@@ -782,48 +782,61 @@
                     color: black;
                 } */
 
-.subtext h1 {
-    --font-color: #323232;
-    --bg-color: #fff;
-    --main-color: #404040;
-    font-size: clamp(20px, 8vw, 40px);
-    line-height: clamp(50px, 2vw, 150px);
-    z-index: 1;
-    color: #dbc4de;
-    position: absolute;
-    top: 28%;
-    left: 22%;
-    transform: translate(-50%, -50%);
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    text-shadow: 6px 6px var(--main-color);
-    opacity: 1;
-    margin-top: 20%;
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+    margin-top: 50px;
+
+    justify-content: center;
 }
 
-.ms {
-    margin-left: 0%;
+/* Default: Logos are stacked (for mobile) */
+.logos {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-.cs {
-    margin-left: 28%;
+/* Logo sizes remain unchanged */
+.logo1 {
+    width: 280px;
+    height: 180px;
+    margin-top: 420px;
 }
 
-.wie {
-    margin-left: 55%;
+.logo2 {
+    width: 265px;
+    height: 140px;
+    margin-top: 420px;
+}
+
+.logo3 {
+    width: 180px;
+    height: 150px;
+    margin-top: 420px;
 }
 
 .btn111 a {
-    text-decoration: none;
-    color: inherit;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+    margin-top: 50px;
+    justify-content: center;
 
 }
 
 .button-cs {
     position: absolute;
-    top: 79%;
-    left: 16%;
+    margin-top: 5px;
+    left: 21%;
     z-index: 5;
     --font-color: #323232;
     --bg-color: #fff;
@@ -853,8 +866,8 @@
 
 .button-mtts {
     position: absolute;
-    top: 79%;
-    left: 45%;
+    margin-top: 5px;
+    left: 47%;
     z-index: 1;
     --font-color: #323232;
     --bg-color: #fff;
@@ -884,7 +897,7 @@
 
 .button-wie {
     position: absolute;
-    top: 79%;
+    margin-top: 5px;
     left: 72%;
     z-index: 1;
     --font-color: #323232;
