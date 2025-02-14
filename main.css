@@ -1173,25 +1173,8 @@
     }
 
     .button {
-        position: relative;
-        top: 70%;
-        left: 126px;
-        transform: translate(-50px, -50px);
-        z-index: 1;
-        --font-color: #323232;
-        --bg-color: #fff;
-        --main-color: #404040;
-        width: 100px;
-        height: 25px;
-        border-radius: 5px;
-        border: 2px solid var(--main-color);
-        background-color: var(--bg-color);
-        box-shadow: 4px 4px var(--main-color);
-        font-size: 17px;
-        font-weight: 600;
-        color: var(--font-color);
-        cursor: pointer;
-        opacity: 1;
+        display: none;
+
     }
 
     .button:active {
