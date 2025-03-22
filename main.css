@@ -38,12 +38,12 @@
 }
 
 .text p {
-    font-size: clamp(20px, 8vw, 40px);
+    font-size: clamp(10px, 5vw, 30px);
     line-height: clamp(50px, 2vw, 150px);
     z-index: 1;
     color: #ffff;
     position: absolute;
-    top: 59%;
+    top: clamp(60%, 15vw, 30%);
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Jersey 10", sans-serif;
@@ -69,7 +69,7 @@
 }
 
 .text4 p {
-    font-size: clamp(20px, 8vw, 40px);
+    font-size: clamp(30px, 8vw, 50px);
     line-height: clamp(50px, 2vw, 150px);
     z-index: 1;
     color: #ffff;
@@ -84,7 +84,7 @@
 }
 
 .text3 p {
-    font-size: clamp(15px, 2vw, 40px);
+    font-size: clamp(20px, 2vw, 50px);
     line-height: clamp(28px, 0vw, 150px);
     z-index: 1;
     text-align: center;
@@ -102,13 +102,13 @@
 /* From Uiverse.io by andrew-demchenk0 */
 .button {
     position: absolute;
-    top: 72%;
+    top: clamp(70%, 15vw, 40%);
     left: 45%;
     z-index: 1;
     --font-color: #323232;
     --bg-color: #fff;
     --main-color: #404040;
-    width: 150px;
+    width: 130px;
     height: 40px;
     border-radius: 5px;
     border: 2px solid var(--main-color);
@@ -157,7 +157,8 @@
     position: fixed;
     /* Fixed for the nav as well */
     top: 0;
-    left: 47%;
+    padding: 5px;
+    left: 52%;
     /* Keep your alignment */
     font-family: "Jersey 10", sans-serif;
     font-style: normal;
@@ -180,7 +181,7 @@
 .header a {
     color: #fff;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 20px;
     display: inline-block;
     position: relative;
     transition: transform 0.2s ease;
@@ -463,40 +464,52 @@
     animation: glitch 0.3s infinite;
 }
 
+.scroll-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 10px;
+    animation: scroll 40s linear infinite;
+}
+
+.scroll-container:hover {
+    animation-play-state: paused;
+}
+
 .card0-container {
+
     display: flex;
     scroll-snap-type: x mandatory;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    /* Hide the scrollbar */
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
     gap: 20px;
     scroll-padding-top: 24px;
     border-radius: 8px;
-
-    margin-left: 2%;
-    display: flex;
-    overflow-x: scroll;
-    overflow-wrap: anywhere;
-    padding: 24px;
-    width: 100%;
-    scroll-snap-type: x mandatory;
-    scroll-padding-top: 24px;
-    border-radius: 8px;
-    gap: 20px;
-    z-index: 2;
+    position: relative;
+    animation: slide 40s linear infinite;
+    /* Add animation */
 }
 
-.card0-container::-webkit-scrollbar {
-    width: 1px;
-    height: 9px;
-    z-index: 5;
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
-.card0-container::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background: #ffffff;
-    z-index: 5;
+.card0-container:hover {
+    animation-play-state: paused;
+    /* Pause on hover */
 }
 
 .card0,
@@ -507,7 +520,8 @@
 .card05,
 .card06 {
     margin-top: 22%;
-    flex: 0 0 100%;
+    flex: 0 0 22%;
+    /* Adjust the width so at least 4 cards are visible */
     box-sizing: border-box;
     position: relative;
     display: flex;
@@ -517,12 +531,11 @@
     border-radius: 6px;
     gap: 0.5rem;
     height: max-content;
-    flex: 0 0 22%;
-    /* Adjust the width so at least 4 cards are visible */
     min-width: 200px;
     /* Ensure cards don't get too small */
 }
 
+/* Rest of your existing CSS remains unchanged */
 .card0_form img,
 .card01_form img,
 .card02_form img,
@@ -665,7 +678,6 @@
 .front {
     transform: translate3d(0, 0, 1em);
 }
-
 
 
 .header img {
