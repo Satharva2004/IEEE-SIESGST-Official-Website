@@ -473,7 +473,7 @@
 .scroll-container {
     display: flex;
     gap: 10px;
-    animation: scroll 40s linear infinite;
+    animation: scroll 30s linear infinite;
 }
 
 .scroll-container:hover {
