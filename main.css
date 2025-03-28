@@ -259,7 +259,7 @@
     display: flex;
     justify-content: center;
     justify-items: center;
-    gap: 30px;
+    gap: 6rem;
     /* Add some space between the cards */
     padding: 90px;
 
@@ -1469,13 +1469,14 @@
         flex-direction: column;
         justify-content: center;
         justify-items: center;
-        gap: 0%;
+        gap: 2rem;
         /* Add some space between the cards */
         padding: 50px;
         /* Add padding around the container */
         opacity: 1;
         text-align: center;
         padding-left: 10%;
+        margin-top:1rem ;
         top: 13%;
         position: absolute;
     }
