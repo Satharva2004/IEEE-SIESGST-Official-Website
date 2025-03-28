@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Readex+Pro:wght@160..700&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
     <title>IEEE SIES GST</title>
@@ -36,52 +37,52 @@
 
 <body>
     <div class="section" id="about-us"></div>
-        <div id="vanta-bg-about"></div>
-        <div class="text3">
-            <h1>EVENT INFO</h1>
-            <p>We are the IEEE SIES GST Student Body for the academic year 2024, dedicated to fostering a collaborative
-                environment for students interested in engineering, technology, and innovation.</p>
-        </div>
-        <div class="subtext">
-            <h1 class="ms">mtts</h1>
-            <h1 class="cs">cs</h1>
-            <h1 class="wie">wie</h1>
-        </div>
-        <div class="btn111">
-            <button class="button-mtts"><a href="#events">know more →</a></button>
-            <button class="button-cs">
-                <a href="#events">know more →</a>
-            </button>
-            <button class="button-wie">
-                <a href="#events">know more →</a>
-            </button>
-        </div>
+    <div id="vanta-bg-about"></div>
+    <div class="text3">
+        <h1>EVENT INFO</h1>
+        <p>We are the IEEE SIES GST Student Body for the academic year 2024, dedicated to fostering a collaborative
+            environment for students interested in engineering, technology, and innovation.</p>
+    </div>
+    <div class="subtext">
+        <h1 class="ms">mtts</h1>
+        <h1 class="cs">cs</h1>
+        <h1 class="wie">wie</h1>
+    </div>
+    <div class="btn111">
+        <button class="button-mtts"><a href="#events">know more →</a></button>
+        <button class="button-cs">
+            <a href="#events">know more →</a>
+        </button>
+        <button class="button-wie">
+            <a href="#events">know more →</a>
+        </button>
+    </div>
     </div>
 </body>
 
-    <script>
+<script>
 
-        VANTA.GLOBE({
-            el: "#vanta-bg-home",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0xffffff,
-            size: 0.60,
-            backgroundColor: 0x181818,
-            speed: 2,
-        });
-        gsap.from(".text h1", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.5 });
-        gsap.from(".text p", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.7 });
-        gsap.from(".button", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.9 });
-        gsap.from(".header nav", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
-        gsap.from(".header img", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
-        gsap.registerPlugin(ScrollTrigger);
-    </script>
+    VANTA.GLOBE({
+        el: "#vanta-bg-home",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xffffff,
+        size: 0.60,
+        backgroundColor: 0x181818,
+        speed: 2,
+    });
+    gsap.from(".text h1", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.5 });
+    gsap.from(".text p", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.7 });
+    gsap.from(".button", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.9 });
+    gsap.from(".header nav", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
+    gsap.from(".header img", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
+    gsap.registerPlugin(ScrollTrigger);
+</script>
 
 </body>
 

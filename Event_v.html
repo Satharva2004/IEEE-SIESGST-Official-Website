@@ -154,6 +154,57 @@
           font-size: 15px;
           margin-bottom: 10px;
         }
+
+
+        /* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .speaker img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .speaker img {
+        width: 200px;
+    }
+
+    #speakers .speaker .details h3 {
+        font-size: 18px;
+    }
+
+    #speakers .speaker .details p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .speaker img {
+        width: 150px;
+    }
+
+    #speakers .speaker .details h3 {
+        font-size: 16px;
+    }
+
+    #speakers .speaker .details p {
+        font-size: 12px;
+    }
+}
         </style>
 </head>
 

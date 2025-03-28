@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Readex+Pro:wght@160..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="wie.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="main.js"></script>
     <title>IEEE SIES GST</title>
     <style>
@@ -75,9 +76,9 @@
     </header>
     </div>
 
-    <!-- <button class="button">
+     <button class="button">
             <a href="#events">Let’s go →</a>
-        </button> -->
+        </button> 
 
 
 
@@ -118,6 +119,119 @@
             },
             x: 500,
             y: 50
+        });
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Readex+Pro:wght@160..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>IEEE SIES GST</title>
+    <style>
+        body {
+            font-family: 'Jersey 10', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-80 backdrop-blur-md shadow-md z-50">
+        <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+            <img src="IEEE SIESGST_white.png" alt="IEEE Logo" class="w-12 md:w-16">
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-white text-lg hover:text-purple-500">→ Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <div class="relative w-screen h-screen flex flex-col items-center justify-center">
+        <div id="vanta-bg-events" class="absolute inset-0 -z-10"></div>
+
+        <!-- Heading -->
+        <div class="text-center px-4 md:px-10 lg:px-20 max-w-6xl mt-14">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+                WOMEN IN ENGINEERING
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl">
+                "Meet Our IEEE Behind The Scene Members"
+            </p>
+        </div>
+
+        <!-- Description and Logo -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 px-4 md:px-10 lg:px-20 max-w-6xl">
+            <!-- Description -->
+            <p class="text-base md:text-lg lg:text-xl leading-relaxed">
+                The Women in Engineering (WiE) affinity group at IEEE SIESGST is committed to promoting diversity and
+                inclusion in the field of engineering and technology. This track aims to empower women engineers by
+                providing a supportive community where they can connect, collaborate, and excel. WiE focuses on topics
+                such as ethical AI, neuro AI, digital artwork, and leadership, offering a platform for personal and
+                professional growth.
+                At IEEE SIESGST, the WiE track has been instrumental in organizing impactful events like the
+                International Women’s Day seminar and panel discussions. These initiatives inspire students by
+                showcasing the achievements of women in technology and providing resources to overcome challenges in
+                the field. WiE fosters an environment of equality, encouraging all students to thrive and make
+                meaningful contributions.
+            </p>
+
+            <!-- Logo -->
+            <div class="flex items-center justify-center">
+                <img src="Wie.png" alt="WiE Logo" class="w-1/2 md:w-56 lg:w-96">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+    <script>
+        VANTA.DOTS({
+            el: "#vanta-bg-events",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 100.00,
+            minWidth: 100.00,
+            scale: 0.7,
+            scaleMobile: 1.00,
+            color: 0xf2f2f2,
+            color2: 0x181818,
+            backgroundColor: 0x181818,
+            speed: 2,
         });
     </script>
 

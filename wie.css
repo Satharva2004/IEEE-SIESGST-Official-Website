@@ -244,3 +244,133 @@
         opacity: 1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General styles for responsiveness */
+
+/* Fix the image position */
+.cslogo img {
+    width: 22%;
+    z-index: 1;
+    position: absolute; /* Changed from fixed to absolute */
+   
+    top: 8%;
+    transform: translate(-50%, 0); /* Ensure proper alignment */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .text h1 {
+        font-size: 60px;
+       
+        transform: translate(-50%, -50%);
+    }
+
+    .text p {
+        font-size: 20px;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .description p {
+        font-size: 20px;
+        line-height: 28px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 20px;
+    }
+
+    .cslogo img {
+        width: 30%;
+        left: 60%;
+        top: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .text h1 {
+        font-size: 50px;
+        margin-top: 20%;
+        margin-left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text p {
+        font-size: 18px;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .description p {
+        font-size: 18px;
+        line-height: 25px;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 15px;
+    }
+
+    .cslogo img {
+        width: 40%;
+        left: 55%;
+        top: 15%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text h1 {
+        font-size: 40px;
+       
+        transform: translate(-50%, -50%);
+    }
+
+    .text p {
+        font-size: 16px;
+        top: 20%;
+       
+        transform: translate(-50%, -50%);
+    }
+
+    .description p {
+        font-size: 16px;
+        line-height: 22px;
+        top: 50%;
+       
+        
+        padding: 0 10px;
+    }
+
+    .cslogo img {
+        width: 50%;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+    }
+
+    .header img {
+        width: 10%;
+        left: 5%;
+        top: 5%;
+    }
+
+    .header nav {
+        font-size: 18px;
+        left: 100%;
+        transform: translateX(-50%);
+    }
+}
