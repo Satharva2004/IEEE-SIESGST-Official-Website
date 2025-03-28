@@ -62,6 +62,7 @@
     opacity: 1;
 
 }
+
 .description p {
     font-size: 25px;
     line-height: 30px;
@@ -77,7 +78,8 @@
     padding-right: -100%;
 
 }
-.cslogo img{
+
+.cslogo img {
     width: 22%;
     z-index: 1;
     position: fixed;
@@ -86,6 +88,7 @@
     background-attachment: scroll;
     background-repeat: no-repeat;
 }
+
 .team p {
     font-size: 60px;
     line-height: 150px;

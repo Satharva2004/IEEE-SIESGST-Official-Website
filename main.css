@@ -38,8 +38,7 @@
 }
 
 .text p {
-    font-size: clamp(10px, 5vw, 30px);
-    line-height: clamp(50px, 2vw, 150px);
+    font-size: clamp(30px, 5vw, 30px);
     z-index: 1;
     color: #ffff;
     position: absolute;
@@ -49,7 +48,6 @@
     font-family: "Jersey 10", sans-serif;
     font-weight: 100;
     font-style: normal;
-    text-align: center;
     opacity: 1;
 }
 
@@ -818,9 +816,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 150px;
+    gap: 160px;
     margin-top: 50px;
-
     justify-content: center;
 }
 
@@ -836,8 +833,8 @@
 
 /* Logo sizes remain unchanged */
 .logo1 {
-    width: 280px;
-    height: 180px;
+    width: 200px;
+    height: 100px;
     margin-top: 420px;
 }
 
@@ -867,7 +864,7 @@
 .button-cs {
     position: absolute;
     margin-top: 5px;
-    left: 21%;
+    left: 20%;
     z-index: 5;
     --font-color: #323232;
     --bg-color: #fff;
@@ -898,7 +895,7 @@
 .button-mtts {
     position: absolute;
     margin-top: 5px;
-    left: 47%;
+    left: 46%;
     z-index: 1;
     --font-color: #323232;
     --bg-color: #fff;
@@ -929,7 +926,7 @@
 .button-wie {
     position: absolute;
     margin-top: 5px;
-    left: 72%;
+    left: 71%;
     z-index: 1;
     --font-color: #323232;
     --bg-color: #fff;
@@ -1643,6 +1640,112 @@
     }
 }
 
+
+
+
+
+@media (max-width: 1200px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .card1, .card2 {
+        width: 80%;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .text h1 {
+        font-size: 50px;
+        line-height: 60px;
+        top: 30%;
+    }
+
+    .text p {
+        font-size: 20px;
+        line-height: 30px;
+        top: 40%;
+    }
+
+    .button {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header nav {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header img {
+        width: 10%;
+        left: 5%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .card1, .card2 {
+        width: 90%;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .text h1 {
+        font-size: 4rem;
+        line-height: 40px;
+        top: 40%;
+    }
+
+    .text p {
+        font-size: 1rem;
+        line-height: 20px;
+        top: 50%;
+    }
+
+    .button {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header nav {
+        font-size: 20px;
+    }
+
+    .header img {
+        width: 15%;
+        left: 5%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .card1, .card2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card__title, .card1__title, .card2__title {
+        font-size: 20px;
+    }
+
+    .card__content, .card1__content, .card2__content {
+        font-size: 14px;
+    }
+
+    .card__button, .card1__button, .card2__button {
+        font-size: 14px;
+    }
+}
 
 
 
