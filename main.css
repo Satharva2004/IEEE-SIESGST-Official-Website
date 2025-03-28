@@ -1152,33 +1152,42 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 800px) {
     .text h1 {
-        font-size: clamp(70px, 30vw, 100px);
-        line-height: clamp(65px, 20vw, 25px);
-        top: 40%;
-        text-wrap-mode: nowrap;
-        padding: 10%;
-        padding: 10px;
+        font-size: clamp(8rem, 70vw, 10rem);
+        /* Better relative line height */
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        position: absolute;
+        top: 50%;
+        /* Adjusted down slightly */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
     }
 
     .text p {
-        font-size: clamp(18px, 20vw, 28px);
-        line-height: clamp(20px, 15vw, 14px);
-        z-index: 1;
+        font-size: clamp(24px, 25vw, 36px);
+        line-height: 0.5;
+        /* Better readability */
         letter-spacing: 2px;
-        color: #ffff;
+        color: #fff;
         position: absolute;
-        padding: 0px;
-        top: 58%;
+        top: 50%;
+        /* Positioned below h1 */
         left: 50%;
-        padding: 10px;
         transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
         font-weight: 100;
         text-align: center;
-        opacity: 1;
-        padding-top: 5%;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        /* Prevents text from stretching too wide */
+        max-width: 800px;
+        /* Optional: Limits paragraph width */
     }
 
     .button {
@@ -1265,7 +1274,7 @@
         color: #fff;
         position: relative;
         margin-top: 15px;
-        margin-left: 150px;
+        margin-left: 350px;
         z-index: 1002;
     }
 
@@ -1631,7 +1640,9 @@
         align-items: center;
     }
 
-    .card, .card1, .card2 {
+    .card,
+    .card1,
+    .card2 {
         width: 80%;
         margin: 20px 0;
     }
@@ -1671,7 +1682,9 @@
         align-items: center;
     }
 
-    .card, .card1, .card2 {
+    .card,
+    .card1,
+    .card2 {
         width: 90%;
         margin: 20px 0;
     }
@@ -1710,20 +1723,28 @@
         align-items: center;
     }
 
-    .card, .card1, .card2 {
+    .card,
+    .card1,
+    .card2 {
         width: 100%;
         margin: 10px 0;
     }
 
-    .card__title, .card1__title, .card2__title {
+    .card__title,
+    .card1__title,
+    .card2__title {
         font-size: 20px;
     }
 
-    .card__content, .card1__content, .card2__content {
+    .card__content,
+    .card1__content,
+    .card2__content {
         font-size: 14px;
     }
 
-    .card__button, .card1__button, .card2__button {
+    .card__button,
+    .card1__button,
+    .card2__button {
         font-size: 14px;
     }
 }
