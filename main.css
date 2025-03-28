@@ -599,6 +599,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    word-wrap: break-word;
+}
+.card0_form span,
+.card01_form span,
+.card02_form span,
+.card03_form span,
+.card04_form span,
+.card05_form span,
+.card06_form span {
+    display: block; /* Change span to block to allow wrapping */
+    word-wrap: break-word; /* Ensure long words break to the next line */
+    white-space: normal; /* Allow normal text wrapping */
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+    color: #fff; /* Ensure text color is visible */
+    padding: 10px; /* Add padding for spacing */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a background for better visibility */
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 .card0_data span,
