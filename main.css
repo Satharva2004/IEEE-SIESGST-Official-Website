@@ -38,8 +38,7 @@
 }
 
 .text p {
-    font-size: clamp(10px, 5vw, 30px);
-    line-height: clamp(50px, 2vw, 150px);
+    font-size: clamp(30px, 5vw, 30px);
     z-index: 1;
     color: #ffff;
     position: absolute;
@@ -49,7 +48,6 @@
     font-family: "Jersey 10", sans-serif;
     font-weight: 100;
     font-style: normal;
-    text-align: center;
     opacity: 1;
 }
 
@@ -799,9 +797,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 150px;
+    gap: 160px;
     margin-top: 50px;
-
     justify-content: center;
 }
 
@@ -817,8 +814,8 @@
 
 /* Logo sizes remain unchanged */
 .logo1 {
-    width: 280px;
-    height: 180px;
+    width: 200px;
+    height: 100px;
     margin-top: 420px;
 }
 
@@ -848,7 +845,7 @@
 .button-cs {
     position: absolute;
     margin-top: 5px;
-    left: 21%;
+    left: 20%;
     z-index: 5;
     --font-color: #323232;
     --bg-color: #fff;
@@ -879,7 +876,7 @@
 .button-mtts {
     position: absolute;
     margin-top: 5px;
-    left: 47%;
+    left: 46%;
     z-index: 1;
     --font-color: #323232;
     --bg-color: #fff;
@@ -910,7 +907,7 @@
 .button-wie {
     position: absolute;
     margin-top: 5px;
-    left: 72%;
+    left: 71%;
     z-index: 1;
     --font-color: #323232;
     --bg-color: #fff;
