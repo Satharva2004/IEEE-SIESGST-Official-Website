@@ -202,9 +202,6 @@
 
 
 
-/* From Uiverse.io by andrew-demchenk0 */
-/* before adding the photo to the div with the "card-photo" class, in the css clear the styles for .card-photo and remove .card-photo::before and .card-photo::after, then set the desired styles for .card- photo. */
-
 
 
 @media (max-width: 800px) {
