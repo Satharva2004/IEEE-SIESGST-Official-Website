@@ -227,8 +227,8 @@ body {
         z-index: 1;
         position: fixed;
         position: absolute;
-        left: 3%;
-        top: -18%;
+        left: 10%;
+        top: -22%;
     }
 
     .text p {

@@ -250,11 +250,11 @@ body {
     }
 
     .cslogo img {
-        width: 40%;
+        width: 50%;
         z-index: 1;
         position: fixed;
         position: absolute;
-        left: 3%;
+        left: 10%;
         top: -18%;
     }
 
