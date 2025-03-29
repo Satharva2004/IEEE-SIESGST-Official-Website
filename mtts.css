@@ -5,6 +5,15 @@
     z-index: 1;
 }
 
+html,
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 #vanta-bg-home,
 #vanta-bg-events,
 #vanta-bg-gallery,
@@ -203,44 +212,160 @@
 
 
 
-/* From Uiverse.io by andrew-demchenk0 */
-/* before adding the photo to the div with the "card-photo" class, in the css clear the styles for .card-photo and remove .card-photo::before and .card-photo::after, then set the desired styles for .card- photo. */
 
-
-
-@media (max-width: 800px) {
-
-    .footer {
-        font: bold 14px sans-serif;
-    }
-
-    .footer .footer-left,
-    .footer .footer-center,
-    .footer .footer-right {
-        display: block;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .footer .footer-center i {
-        margin-left: 0;
-    }
-}
 
 @media only screen and (max-width: 480px) {
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .cslogo img {
+        width: 40%;
+        z-index: 1;
+        position: fixed;
+        position: absolute;
+        left: 3%;
+        top: -18%;
+    }
+
     .text p {
-        font-size: 40px;
-        line-height: 150px;
+        line-height: 40px;
         z-index: 1;
         color: #ffff;
         position: absolute;
-        top: 57%;
-        left: 28.5%;
+        margin-top: 1%;
+        left: 60%;
+        width: 100%;
         transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
         font-weight: 100;
         font-style: normal;
+        justify-content: center;
+        font-size: clamp(30px, 6vw, 40px);
         opacity: 1;
+    }
+
+    .text h1 {
+        --font-color: #323232;
+        --bg-color: #fff;
+        --main-color: #404040;
+        font-size: clamp(40px, 7vw, 50px);
+        line-height: 50px;
+        z-index: 1;
+        color: #ffff;
+        position: absolute;
+        margin-top: 70%;
+        left: 25%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        text-shadow: 6px 6px var(--main-color);
+        opacity: 1;
+        position: relative;
+    }
+
+    .description p {
+        line-height: 10spx;
+        z-index: 1;
+        color: #ffff;
+        position: absolute;
+        /* Key changes below */
+        left: 0;
+        right: 0;
+        width: 80%;
+        top: 22%;
+        margin-left: auto;
+        margin-right: auto;
+        transform: none;
+        /* End key changes */
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        text-align: justify;
+        font-size: clamp(18px, 4vw, 24px);
+        /* Reduced font size */
+        opacity: 1;
+        overflow-wrap: break-word;
+        padding: 0 1px;
+    }
+
+    .header {
+        position: fixed;
+        /* Fixed to make it stay at the top */
+        top: 0;
+        left: 0;
+        /* Aligns the header to the left of the page */
+        width: calc(100% - 17px);
+        /* Subtracts a bit from the width to avoid overlap with the scrollbar */
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Transparent white background */
+        backdrop-filter: blur(10px);
+        /* The blur effect */
+        -webkit-backdrop-filter: blur(25px);
+        /* For Safari */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Optional: shadow for better visual effect */
+        z-index: 1000;
+        padding: 18px 12px;
+        /* Add some padding for spacing */
+    }
+
+    .header img {
+        width: 17%;
+        z-index: 1;
+        position: fixed;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+
+    .header ul {
+        display: none;
+        /* Hide menu initially on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 59px;
+        left: 100px;
+        width: 450%;
+        background-color: #333;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .header ul.active {
+        display: flex;
+        /* Show menu when active */
+    }
+
+    .header li {
+        margin: 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .header li:last-child {
+        border-bottom: none;
+    }
+
+    .header a {
+        padding: 15px 25px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+        color: #fff;
+        position: relative;
+        margin-top: 14px;
+        margin-left: 170px;
+        z-index: 1002;
     }
 }

@@ -1463,14 +1463,14 @@
         flex-direction: column;
         justify-content: center;
         justify-items: center;
-        gap: 0%;
+        gap: 10%;
         /* Add some space between the cards */
         padding: 50px;
         /* Add padding around the container */
         opacity: 1;
         text-align: center;
         padding-left: 10%;
-        top: 13%;
+        top: 15%;
         position: absolute;
     }
 
@@ -1497,7 +1497,7 @@
     .card2 {
         margin-top: 15%;
         width: 250px;
-        height: 100px;
+        height: 123px;
         /* Adjust the width as needed */
         padding: 20px;
         background: #000000;

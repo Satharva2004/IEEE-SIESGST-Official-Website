@@ -66,11 +66,11 @@
         </div>
     </div>
     <header class="header">
-        <img src="IEEE SIESGST_white.png" alt="alt">
+        <a href="index.html"><img src="IEEE SIESGST_white.png" alt="alt"></a>
         <nav>
-            <ul>
-                <li><a href="index.html">→ Home</a></li>
-            </ul>
+            <a href="index.html">
+                <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
+            </a>
         </nav>
     </header>
     </div>
@@ -157,6 +157,7 @@
         gsap.from(".button", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.9 });
         gsap.from(".header nav", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
         gsap.from(".header img", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
+        gsap.from(".description", { duration: 2, y: 50, opacity: 0, ease: "power3.out", delay: 1.5 });
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.to(".cards - container", {

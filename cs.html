@@ -45,26 +45,33 @@
 
         </div>
         <div class="description">
-            <p>The Computer Society (CSI Chapter) of IEEE SIESGST is dedicated to advancing knowledge in the field of computing and IT.
-            This track provides a platform for students to explore cutting-edge technologies such as artificial intelligence,
-            machine learning, cybersecurity, software development, and computer vision. Through workshops, coding competitions,
-            hackathons, and expert talks, the CSI Chapter empowers students to develop their technical skills and stay updated with
-            the latest industry trends.
-            At IEEE SIESGST, the CSI Chapter has consistently driven innovation and learning, offering opportunities for members to
-            collaborate, research, and implement real-world solutions. By connecting students with industry leaders and fostering
-            peer-to-peer learning, this track plays a pivotal role in preparing the next generation of technology professionals.
-</p>
+            <p>The Computer Society (CSI Chapter) of IEEE SIESGST is dedicated to advancing knowledge in the field of
+                computing and IT.
+                This track provides a platform for students to explore cutting-edge technologies such as artificial
+                intelligence,
+                machine learning, cybersecurity, software development, and computer vision. Through workshops, coding
+                competitions,
+                hackathons, and expert talks, the CSI Chapter empowers students to develop their technical skills and
+                stay updated with
+                the latest industry trends.
+                At IEEE SIESGST, the CSI Chapter has consistently driven innovation and learning, offering opportunities
+                for members to
+                collaborate, research, and implement real-world solutions. By connecting students with industry leaders
+                and fostering
+                peer-to-peer learning, this track plays a pivotal role in preparing the next generation of technology
+                professionals.
+            </p>
         </div>
         <div class="cslogo">
             <img src="cs track.png" alt="img">
         </div>
     </div>
     <header class="header">
-        <img src="IEEE SIESGST_white.png" alt="alt">
+        <a href="index.html"><img src="IEEE SIESGST_white.png" alt="alt"></a>
         <nav>
-            <ul>
-                <li><a href="index.html">→ Home</a></li>
-            </ul>
+            <a href="index.html">
+                <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
+            </a>
         </nav>
     </header>
     </div>
@@ -151,6 +158,7 @@
         gsap.from(".button", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.9 });
         gsap.from(".header nav", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
         gsap.from(".header img", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
+        gsap.from(".description", { duration: 2, y: 50, opacity: 0, ease: "power3.out", delay: 1.5 });
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.to(".cards - container", {
