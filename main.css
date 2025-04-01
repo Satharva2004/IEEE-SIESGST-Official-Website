@@ -1527,16 +1527,10 @@
         z-index: 2;
     }
 
-    .scroll-wrapper {
-        overflow: hidden;
-        white-space: nowrap;
-        width: 100%;
-    }
-
     .scroll-container {
         display: flex;
         gap: 10px;
-        animation: scroll 20s linear infinite;
+        animation: scroll 9s linear infinite;
     }
 
     .scroll-container:hover {
@@ -1550,12 +1544,12 @@
         justify-items: center;
         gap: 25%;
         /* Add some space between the cards */
-        padding: 50px;
+        padding: 30px;
         /* Add padding around the container */
         opacity: 1;
         text-align: center;
         padding-left: 10%;
-        top: 18%;
+        top: 22%;
         position: absolute;
     }
 
