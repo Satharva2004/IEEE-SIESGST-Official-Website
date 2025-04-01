@@ -471,7 +471,7 @@
 .scroll-container {
     display: flex;
     gap: 10px;
-    animation: scroll 30s linear infinite;
+    animation: scroll 20s linear infinite;
 }
 
 .scroll-container:hover {
@@ -491,7 +491,7 @@
     scroll-padding-top: 24px;
     border-radius: 8px;
     position: relative;
-    animation: slide 40s linear infinite;
+    animation: slide 30s linear infinite;
     /* Add animation */
 }
 
@@ -1318,7 +1318,29 @@
         letter-spacing: 2px;
         color: #fff;
         position: absolute;
-        top: 28%;
+        top: 29%;
+        /* Positioned below h1 */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 100;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        /* Prevents text from stretching too wide */
+        max-width: 800px;
+        /* Optional: Limits paragraph width */
+    }
+
+    .text2 p {
+        font-size: clamp(13px, 14vw, 18px);
+        line-height: 1;
+        /* Better readability */
+        letter-spacing: 2px;
+        color: #fff;
+        position: absolute;
+        top: 29%;
         /* Positioned below h1 */
         left: 50%;
         transform: translate(-50%, -50%);
@@ -1340,7 +1362,7 @@
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        margin-top: 50px;
+        margin-top: 55px;
     }
 
     /* Logos section */
@@ -1416,6 +1438,28 @@
         text-shadow: 6px 6px var(--main-color);
     }
 
+    .text2 p {
+        font-size: clamp(13px, 16vw, 18px);
+        line-height: 1;
+        /* Better readability */
+        letter-spacing: 2px;
+        color: #fff;
+        position: absolute;
+        top: 22%;
+        /* Positioned below h1 */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 100;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        /* Prevents text from stretching too wide */
+        max-width: 800px;
+        /* Optional: Limits paragraph width */
+    }
+
     .text4 h1 {
         --font-color: #323232;
         --bg-color: #fff;
@@ -1434,6 +1478,28 @@
         font-style: normal;
         margin-top: 0%;
         text-shadow: 6px 6px var(--main-color);
+    }
+
+    .text4 p {
+        font-size: clamp(13px, 16vw, 18px);
+        line-height: 1;
+        /* Better readability */
+        letter-spacing: 2px;
+        color: #fff;
+        position: absolute;
+        top: 29%;
+        /* Positioned below h1 */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 100;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        /* Prevents text from stretching too wide */
+        max-width: 800px;
+        /* Optional: Limits paragraph width */
     }
 
     .card0-container {
@@ -1461,19 +1527,35 @@
         z-index: 2;
     }
 
+    .scroll-wrapper {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    .scroll-container {
+        display: flex;
+        gap: 10px;
+        animation: scroll 20s linear infinite;
+    }
+
+    .scroll-container:hover {
+        animation-play-state: paused;
+    }
+
     .cards-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         justify-items: center;
-        gap: 10%;
+        gap: 25%;
         /* Add some space between the cards */
         padding: 50px;
         /* Add padding around the container */
         opacity: 1;
         text-align: center;
         padding-left: 10%;
-        top: 15%;
+        top: 18%;
         position: absolute;
     }
 
@@ -1502,7 +1584,7 @@
         width: 250px;
         height: 123px;
         /* Adjust the width as needed */
-        padding: 20px;
+        padding: 25px;
         background: #000000;
         box-shadow: 6px 6px 0 #404040;
         transition: transform 0.3s, box-shadow 0.3s;
@@ -1574,8 +1656,8 @@
         border: 3px solid #2e2e2e;
         background: #404040;
         color: #fff;
-        padding: 4px;
-        font-size: 10px;
+        padding: 2px;
+        font-size: 7px;
         font-weight: bold;
         text-transform: uppercase;
         cursor: pointer;
