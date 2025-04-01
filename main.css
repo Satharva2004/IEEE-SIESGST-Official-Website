@@ -1312,22 +1312,25 @@
     }
 
     .text3 p {
-        font-size: clamp(18px, 8vw, 20px);
-        line-height: clamp(17px, 2vw, 30px);
-        z-index: 1;
-        color: #ffff;
+        font-size: clamp(13px, 16vw, 18px);
+        line-height: 1;
+        /* Better readability */
+        letter-spacing: 2px;
+        color: #fff;
         position: absolute;
-        top: calc(10% + 100px);
-        /* Ensure it’s below h1 */
+        top: 28%;
+        /* Positioned below h1 */
         left: 50%;
-        /* Keep centered */
-        max-width: 90%;
-        /* Prevents overflow */
-        text-align: center;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
-        font-style: normal;
-        opacity: 1;
+        font-weight: 100;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        /* Prevents text from stretching too wide */
+        max-width: 800px;
+        /* Optional: Limits paragraph width */
     }
 
     /* Main container centers everything */
