@@ -1312,13 +1312,13 @@
     }
 
     .text3 p {
-        font-size: clamp(13px, 16vw, 18px);
+        font-size: clamp(11px, 14vw, 16px);
         line-height: 1;
         /* Better readability */
         letter-spacing: 2px;
         color: #fff;
         position: absolute;
-        top: 30%;
+        top: 35%;
         /* Positioned below h1 */
         left: 50%;
         transform: translate(-50%, -50%);
@@ -1326,7 +1326,7 @@
         font-weight: 100;
         text-align: center;
         margin: 0;
-        padding: 0;
+        padding: 10px;
         width: 90%;
         /* Prevents text from stretching too wide */
         max-width: 800px;
