@@ -52,18 +52,7 @@
 }
 
 .text2 p {
-    font-size: clamp(20px, 8vw, 40px);
-    line-height: clamp(50px, 2vw, 150px);
-    z-index: 1;
-    color: #ffff;
-    position: absolute;
-    top: 38%;
-    left: 50.5%;
-    transform: translate(-50%, -50%);
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    opacity: 1;
+    display: none;
 }
 
 .text4 p {
@@ -79,17 +68,19 @@
     font-weight: 100;
     font-style: normal;
     opacity: 1;
+    display: none;
 }
 
 .text3 p {
-    font-size: clamp(20px, 2vw, 50px);
+    font-size: clamp(11px, 2vw, 21px);
     line-height: clamp(28px, 0vw, 150px);
     z-index: 1;
+    width: 70%;
     text-align: center;
     text-wrap: pretty;
     color: #ffff;
     position: absolute;
-    top: 45%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Jersey 10", sans-serif;
@@ -1487,7 +1478,7 @@
         letter-spacing: 2px;
         color: #fff;
         position: absolute;
-        top: 29%;
+        top: 33%;
         /* Positioned below h1 */
         left: 50%;
         transform: translate(-50%, -50%);
@@ -1499,6 +1490,7 @@
         width: 90%;
         /* Prevents text from stretching too wide */
         max-width: 800px;
+        display: block;
         /* Optional: Limits paragraph width */
     }
 
@@ -1506,31 +1498,58 @@
         display: flex;
         position: absolute;
         scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        width: 100%;
-        padding: 20px;
+        overflow-x: auto;
+        /* Enables horizontal scrolling */
+        width: 96%;
+        /* Accounts for margin-left: 2% */
+        padding: 24px;
         box-sizing: border-box;
         gap: 20px;
-        scroll-padding-top: 24px;
+        scroll-padding: 24px;
+        /* Snap padding */
         border-radius: 8px;
-        margin-top: 55%;
+        margin-top: 65%;
         margin-left: 2%;
-        display: flex;
-        overflow-x: scroll;
-        overflow-wrap: anywhere;
-        padding: 24px;
-        width: 100%;
-        scroll-snap-type: x mandatory;
-        scroll-padding-top: 24px;
-        border-radius: 8px;
-        gap: 20px;
-        z-index: 2;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
+
+        /* Custom scrollbar styling */
+        scrollbar-width: thin;
+        /* For Firefox */
+        scrollbar-color: #888 #f1f1f1;
+        /* For Firefox */
+    }
+
+    /* Custom scrollbar for Chrome/Safari */
+    .card0-container::-webkit-scrollbar {
+        height: 8px;
+        /* Makes scrollbar thinner (horizontal) */
+    }
+
+    .card0-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* Track color */
+        border-radius: 4px;
+    }
+
+    .card0-container::-webkit-scrollbar-thumb {
+        background: #888;
+        /* Thumb color */
+        border-radius: 4px;
+    }
+
+    .card0-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        /* Darker on hover */
     }
 
     .scroll-container {
         display: flex;
         gap: 10px;
-        animation: scroll 9s linear infinite;
+        scroll-snap-align: start;
+        transition: transform 0.5s ease-out;
     }
 
     .scroll-container:hover {

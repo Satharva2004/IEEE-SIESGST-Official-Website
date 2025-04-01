@@ -711,42 +711,28 @@
             x: 500,
             y: 50
         });
-        const container = document.querySelector('.card0-container');
-        const cards = document.querySelectorAll('.card0', '.card1', '.card2', '.card3', '.card4', '.card5', '.card6', '.card7');
-        const cardWidth = cards[0].offsetWidth + 20; // Card width + gap
-        const totalCards = cards.length / 2; // Number of unique cards
+        const container = document.querySelector(".card0-container");
 
-        let currentPosition = 0;
-        const speed = 5; // Adjust speed (pixels per frame)
+            let isUserScrolling = false;
 
-        function slide() {
-            currentPosition -= speed; // Move the container to the left
-            if (currentPosition <= -cardWidth * totalCards) {
-                // Reset to the start when reaching the end
-                currentPosition = 0;
-                container.style.transition = 'none';
-                container.style.transform = `translateX(${currentPosition}px)`;
+            // Pause auto-scroll when user interacts
+            container.addEventListener("wheel", () => {
+                isUserScrolling = true;
                 setTimeout(() => {
-                    container.style.transition = 'transform 0.5s linear'; // Re-enable smooth transition
-                }, 0);
-            } else {
-                container.style.transform = `translateX(${currentPosition}px)`;
+                    isUserScrolling = false;
+                }, 3000); // Resume auto-scroll after 3s of inactivity
+            });
+
+            // Auto-scroll function
+            function autoScroll() {
+                if (!isUserScrolling) {
+                    container.scrollBy({ left: 2, behavior: "smooth" });
+                }
             }
 
-            requestAnimationFrame(slide); // Continue the animation
-        }
+            // Run auto-scroll every 50ms
+            setInterval(autoScroll, 50);
 
-        // Start the animation
-        slide();
-
-        // Pause on hover
-        container.addEventListener('mouseenter', () => {
-            container.style.animationPlayState = 'paused';
-        });
-
-        container.addEventListener('mouseleave', () => {
-            container.style.animationPlayState = 'running';
-        });
     </script>
 
 </body>
