@@ -1318,7 +1318,7 @@
         letter-spacing: 2px;
         color: #fff;
         position: absolute;
-        top: 29%;
+        top: 30%;
         /* Positioned below h1 */
         left: 50%;
         transform: translate(-50%, -50%);
@@ -1357,7 +1357,7 @@
 
     /* Main container centers everything */
     .container {
-        padding: 10px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1382,7 +1382,7 @@
     .logo1 {
         width: 130px;
         height: 80px;
-        margin-top: 350px;
+        margin-top: 380px;
         /* Kept as is */
     }
 
@@ -1390,7 +1390,7 @@
     .logo2 {
         width: 130px;
         height: 70px;
-        margin-top: 23px;
+        margin-top: 25px;
         /* Kept as is */
     }
 
