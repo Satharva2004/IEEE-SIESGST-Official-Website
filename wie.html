@@ -21,13 +21,17 @@
 
 <body>
     <header class="header">
-        <a href="index.html" class="logo-link">
-            <img src="IEEE SIESGST_white.png" alt="IEEE SIES GST Logo">
-        </a>
+        <a href="index.html"><img src="IEEE SIESGST_white.png" alt="alt"></a>
         <nav>
-            <a href="index.html" class="back-button">
-                <div class="menu-toggle">←</div>
-            </a>
+            <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
+            <ul class="menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about-us">About</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -63,6 +67,12 @@
     </main>
 
     <script>
+        // Mobile menu toggle
+        function toggleDropdown() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
         window.addEventListener('DOMContentLoaded', function() {
             if (typeof VANTA !== 'undefined') {
                 VANTA.DOTS({

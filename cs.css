@@ -15,14 +15,13 @@ body, html {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(24, 24, 24, 0.8);
+    width: calc(100% - 17px);
+    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 42px 0;
 }
 
 .logo-link img {
@@ -59,66 +58,63 @@ body, html {
 /* Content styles */
 .content-wrapper {
     max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 .title-section {
-    text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    padding-top: 60px;
 }
 
 .main-title {
     font-family: "Jersey 10", sans-serif;
-    font-size: clamp(40px, 8vw, 80px);
-    color: white;
-    text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
-    margin: 0;
-    padding: 20px 0;
+    font-size: 48px;
+    color: #ffffff;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .subtitle {
-    font-size: clamp(18px, 3vw, 24px);
+    font-size: 20px;
     color: #cccccc;
-    margin: 10px 0;
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Description section styles */
 .description-section {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
 }
 
 .description-content {
-    color: white;
-    font-size: clamp(16px, 2vw, 18px);
-    line-height: 1.6;
-    max-width: 800px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
 .description-content p {
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .logo-section {
-    width: 100%;
-    max-width: 400px;
+    text-align: center;
     margin: 40px auto;
 }
 
 .track-logo {
-    width: 100%;
+    max-width: 300px;
     height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.track-logo:hover {
-    transform: scale(1.05);
+    display: block;
+    margin: 0 auto;
 }
 
 /* Responsive design */
@@ -292,10 +288,9 @@ body, html {
 .header nav {
     z-index: 1001;
     position: fixed;
-    /* Fixed for the nav as well */
     top: 0;
-    left: 44.5%;
-    /* Keep your alignment */
+    padding: 5px;
+    left: 52%;
     font-family: "Jersey 10", sans-serif;
     font-style: normal;
     font-size: 25px;
@@ -307,7 +302,6 @@ body, html {
     padding: 0;
     display: flex;
     justify-content: space-around;
-    /* Adjust based on spacing needs */
 }
 
 .header li {
@@ -317,7 +311,7 @@ body, html {
 .header a {
     color: #fff;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 20px;
     display: inline-block;
     position: relative;
     transition: transform 0.2s ease;
@@ -332,31 +326,19 @@ body, html {
     color: #a241d6;
 }
 
-.side {
-    width: max-content;
-    height: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: bold;
-}
-
-.top {
-    transform: rotateX(-90deg) translate3d(0, 0, 0em);
-}
-
-.front {
-    transform: translate3d(0, 0, 1em);
-}
-
 .header img {
     width: 5.5%;
     z-index: 1;
     position: fixed;
     left: 3%;
     top: 3%;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
 }
 
 @media (max-width: 800px) {
@@ -472,14 +454,12 @@ body, html {
         /* Subtracts a bit from the width to avoid overlap with the scrollbar */
         background-color: rgba(255, 255, 255, 0.1);
         /* Transparent white background */
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(25px);
         /* The blur effect */
-        -webkit-backdrop-filter: blur(25px);
-        /* For Safari */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         /* Optional: shadow for better visual effect */
         z-index: 1000;
-        padding: 18px 12px;
+        padding: 16px 10px;
         /* Add some padding for spacing */
     }
 
@@ -529,8 +509,194 @@ body, html {
         font-size: 20px;
         color: #fff;
         position: relative;
-        margin-top: 14px;
-        margin-left: 170px;
+        margin-top: 15px;
+        margin-left: 350px;
         z-index: 1002;
+    }
+}
+
+/* Essential Mobile Menu Styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu li {
+        display: block;
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu a {
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    .title-section {
+        padding-top: 100px;
+        margin-bottom: 30px;
+    }
+
+    .main-title {
+        font-size: clamp(36px, 8vw, 42px);
+        line-height: 1.3;
+        padding: 0 15px;
+        margin-bottom: 20px;
+        text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .subtitle {
+        font-size: clamp(18px, 4vw, 20px);
+        padding: 0 20px;
+        line-height: 1.5;
+    }
+
+    .description-section {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .description-content {
+        font-size: clamp(16px, 3vw, 18px);
+        line-height: 1.6;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .description-content p {
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .logo-section {
+        margin: 40px auto;
+        padding: 0 20px;
+        max-width: 80%;
+    }
+
+    .track-logo {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .title-section {
+        padding-top: 80px;
+    }
+
+    .main-title {
+        font-size: clamp(32px, 7vw, 36px);
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        font-size: clamp(16px, 3.5vw, 18px);
+        padding: 0 15px;
+    }
+
+    .description-content {
+        font-size: clamp(15px, 2.8vw, 16px);
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+
+    .description-section {
+        padding: 15px;
+    }
+
+    .logo-section {
+        margin: 30px auto;
+        max-width: 90%;
+    }
+}
+
+/* Landscape mode */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    .title-section {
+        padding-top: 120px;
+    }
+
+    .main-title {
+        font-size: clamp(30px, 6vw, 34px);
+    }
+
+    .description-section {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .description-content {
+        flex: 2;
+    }
+
+    .logo-section {
+        flex: 1;
+        margin: 0;
+        max-width: 200px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+    .title-section {
+        padding-top: 70px;
+    }
+
+    .main-title {
+        font-size: clamp(28px, 6vw, 32px);
+    }
+
+    .subtitle {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+
+    .description-content {
+        font-size: clamp(14px, 2.5vw, 15px);
+    }
+}
+
+/* Ensure content is centered on larger screens */
+@media screen and (min-width: 1200px) {
+    .content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .description-section {
+        max-width: 1000px;
+        margin: 0 auto;
     }
 }
