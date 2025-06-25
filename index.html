@@ -142,6 +142,184 @@
                 font-size: 36px;
             }
         }
+
+        /* Custom Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #181818;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #181818;
+            box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: transparent;
+            border-radius: 2px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                inset 0 0 10px rgba(255, 255, 255, 0.2),
+                0 0 15px rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                inset 0 0 10px rgba(255, 255, 255, 0.4),
+                0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+        }
+
+        /* For Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.2) #181818;
+        }
+
+        /* Hide scrollbar on mobile devices */
+        @media (max-width: 768px) {
+            ::-webkit-scrollbar {
+                width: 4px;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                border-width: 1px;
+            }
+        }
+
+        /* Horizontal scrollbar styles */
+        ::-webkit-scrollbar:horizontal {
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb:horizontal {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+        }
+
+        /* Button Styles */
+        .button {
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            outline: none;
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .button:hover::before {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* Custom Cursor Styles */
+        * {
+            cursor: none !important;
+        }
+
+        .cursor-dot,
+        .cursor-outline {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            transition: width 0.2s ease-in-out,
+                        height 0.2s ease-in-out,
+                        background-color 0.2s ease-in-out;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: width 0.2s ease-in-out,
+                        height 0.2s ease-in-out,
+                        border-color 0.2s ease-in-out,
+                        transform 0.2s ease-in-out;
+        }
+
+        /* Cursor states for clickable elements */
+        .cursor-hover .cursor-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+        }
+
+        .cursor-hover .cursor-outline {
+            width: 50px;
+            height: 50px;
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Hide default cursor on clickable elements */
+        a, button, .button, [onclick], .menu-toggle {
+            cursor: none !important;
+        }
+
+        /* Hide cursors on mobile/touch devices */
+        @media (max-width: 768px) {
+            .cursor-dot,
+            .cursor-outline {
+                display: none;
+            }
+            * {
+                cursor: auto !important;
+            }
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
@@ -154,6 +332,10 @@
 </head>
 
 <body>
+    <!-- Add cursor elements at the start of body -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <header class="header">
         <a href="index.html"><img src="IEEE SIESGST_white.png" alt="alt"></a>
         <nav>
@@ -175,9 +357,7 @@
             <h1>I E E E</h1>
             <p>IEEE SIES GST Student body academic year 2025.</p>
         </div>
-        <button class="button">
-            <a href="#events">Let's go</a>
-        </button>
+        <button class="button" onclick="scrollToEvents()">Let's go</button>
     </div>
     <div class="section" id="about-us">
         <div id="vanta-bg-about"></div>
@@ -563,6 +743,85 @@
     <!-- Initialize all effects -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Custom cursor initialization
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            // Mouse movement
+            document.addEventListener('mousemove', function(e) {
+                const posX = e.clientX;
+                const posY = e.clientY;
+
+                // Animate dot to cursor position
+                cursorDot.style.transform = `translate(${posX}px, ${posY}px)`;
+                
+                // Animate outline with slight delay for smooth effect
+                cursorOutline.animate({
+                    transform: `translate(${posX}px, ${posY}px)`
+                }, {
+                    duration: 500,
+                    fill: "forwards",
+                    easing: "ease"
+                });
+            });
+
+            // Add hover effect for clickable elements
+            const clickables = document.querySelectorAll('a, button, .button, [onclick], .menu-toggle');
+            
+            clickables.forEach(elem => {
+                elem.addEventListener('mouseover', () => {
+                    cursorDot.classList.add('cursor-hover');
+                    cursorOutline.classList.add('cursor-hover');
+                });
+                
+                elem.addEventListener('mouseleave', () => {
+                    cursorDot.classList.remove('cursor-hover');
+                    cursorOutline.classList.remove('cursor-hover');
+                });
+            });
+
+            // Hide cursors when mouse leaves the window
+            document.addEventListener('mouseleave', () => {
+                cursorDot.style.opacity = '0';
+                cursorOutline.style.opacity = '0';
+            });
+
+            document.addEventListener('mouseenter', () => {
+                cursorDot.style.opacity = '1';
+                cursorOutline.style.opacity = '1';
+            });
+
+            // Function to scroll to events section
+            window.scrollToEvents = function() {
+                const eventsSection = document.getElementById('events');
+                if (eventsSection) {
+                    eventsSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            };
+
+            // Initialize smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        const menu = document.querySelector('.menu');
+                        if (menu) {
+                            menu.classList.remove('active');
+                        }
+                    }
+                });
+            });
+
             // Initialize Three.js and VANTA effects
             if (typeof THREE !== 'undefined' && typeof VANTA !== 'undefined') {
                 // Awards background
