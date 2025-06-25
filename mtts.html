@@ -4,179 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE SIES GST - MTT-S</title>
+    
+    <!-- Fonts and Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Readex+Pro:wght@160..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="mtts.css">
-    <script src="main.js"></script>
-    <title>IEEE SIES GST</title>
-    <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            overflow-y: auto;
-            width: 100%;
-            height: 100%;
-            background-color: #181818;
-            scroll-behavior: smooth;
-        }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cs.css">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-
-    <div class="section" id="members.html">
-
-        <div id="vanta-bg-events"></div>
-        <div class="text">
-            <h1>MICROWAVE THEORY AND TECHNOLOGY SOCIETY</h1>
-            <p>"Meet Our IEEE Behind The Scene Members"</p>
-
-        </div>
-        <div class="description">
-            <p>The Microwave Theory and Techniques Society (MTTS) at IEEE SIESGST focuses on the research and
-                development of advanced
-                communication technologies. This track covers a wide range of topics, including microwave engineering,
-                antennas, deep
-                space communication, radar systems, and wireless technology. MTTS provides students with the tools and
-                knowledge
-                required to delve into the intricacies of modern communication systems, fostering innovation in the
-                field.
-                At IEEE SIESGST, the MTTS track stands out for its hands-on workshops, technical seminars, and
-                collaborative projects.
-                Events such as Epsilon provide students with exposure to state-of-the-art advancements in space
-                communication and signal
-                processing, encouraging them to tackle complex challenges and contribute to the future of communication
-                technologies.
-            </p>
-        </div>
-        <div class="cslogo">
-            <img src="MTT-S Logo (For Website 1).png" alt="img">
-        </div>
-    </div>
     <header class="header">
-        <a href="index.html"><img src="IEEE SIESGST_white.png" alt="alt"></a>
+        <a href="index.html" class="logo-link">
+            <img src="IEEE SIESGST_white.png" alt="IEEE SIES GST Logo">
+        </a>
         <nav>
-            <a href="index.html">
-                <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
+            <a href="index.html" class="back-button">
+                <div class="menu-toggle">←</div>
             </a>
         </nav>
     </header>
-    </div>
 
-    <!-- <button class="button">
-            <a href="#events">Let’s go →</a>
-        </button> -->
+    <main class="section" id="mtts-section">
+        <div id="vanta-bg-events" class="vanta-background"></div>
+        
+        <div class="content-wrapper">
+            <div class="title-section">
+                <h1 class="main-title">MICROWAVE THEORY AND TECHNOLOGY SOCIETY</h1>
+                <p class="subtitle">"Meet Our IEEE Behind The Scene Members"</p>
+            </div>
 
-
-
+            <div class="description-section">
+                <div class="description-content">
+                    <p>The Microwave Theory and Techniques Society (MTTS) at IEEE SIESGST focuses on the research and development of advanced 
+                    communication technologies. This track covers a wide range of topics, including microwave engineering, antennas, deep 
+                    space communication, radar systems, and wireless technology.</p>
+                    
+                    <p>MTTS provides students with the tools and knowledge required to delve into the intricacies of modern communication 
+                    systems, fostering innovation in the field.</p>
+                    
+                    <p>At IEEE SIESGST, the MTTS track stands out for its hands-on workshops, technical seminars, and collaborative projects. 
+                    Events such as Epsilon provide students with exposure to state-of-the-art advancements in space communication and signal 
+                    processing, encouraging them to tackle complex challenges and contribute to the future of communication technologies.</p>
+                </div>
+                
+                <div class="logo-section">
+                    <img src="MTT-S Logo (For Website 1).png" alt="MTT-S Logo" class="track-logo">
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            if (typeof VANTA !== 'undefined') {
+                VANTA.DOTS({
+                    el: "#vanta-bg-events",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+            }
 
-        VANTA.GLOBE({
-            el: "#vanta-bg-home",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0xffffff,
-            size: 0.60,
-            backgroundColor: 0x181818,
-            speed: 2,
-        });
+            // GSAP Animations
+            gsap.from(".main-title", { 
+                duration: 1.5, 
+                y: 50, 
+                opacity: 0, 
+                ease: "power3.out", 
+                delay: 0.5 
+            });
 
-        VANTA.DOTS({
-            el: "#vanta-bg-events",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-            speed: 2,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-gallery",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-gallery",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-about",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        gsap.from(".text h1", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.5 });
-        gsap.from(".text p", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.7 });
-        gsap.from(".button", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.9 });
-        gsap.from(".header nav", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
-        gsap.from(".header img", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
-        gsap.from(".description", { duration: 2, y: 50, opacity: 0, ease: "power3.out", delay: 1.5 });
-        gsap.registerPlugin(ScrollTrigger);
+            gsap.from(".subtitle", { 
+                duration: 1.5, 
+                y: 30, 
+                opacity: 0, 
+                ease: "power3.out", 
+                delay: 0.7 
+            });
 
-        gsap.to(".cards - container", {
-            scrollTrigger: {
-                trigger: ".cards - container",
-                scrub: true
-            },
-            x: 500,
-        });
-        gsap.to(".text2 h1", {
-            scrollTrigger: {
-                trigger: ".cards - container",
-                scrub: true
-            },
-            x: 500,
-            y: 50
+            gsap.from(".description-content", { 
+                duration: 1.5, 
+                y: 30, 
+                opacity: 0, 
+                ease: "power3.out", 
+                delay: 0.9 
+            });
+
+            gsap.from(".track-logo", { 
+                duration: 1.5, 
+                scale: 0.8, 
+                opacity: 0, 
+                ease: "power3.out", 
+                delay: 1.1 
+            });
         });
     </script>
-
 </body>
 
 </html>

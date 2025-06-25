@@ -1,17 +1,193 @@
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    scroll-behavior: smooth;
+    font-family: "Readex Pro", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(24, 24, 24, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link img {
+    height: 50px;
+    width: auto;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* Main section styles */
+.section {
+    min-height: 100vh;
+    position: relative;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vanta-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Content styles */
+.content-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(40px, 8vw, 80px);
+    color: white;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: clamp(18px, 3vw, 24px);
+    color: #cccccc;
+    margin: 10px 0;
+}
+
+/* Description section styles */
+.description-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.description-content {
+    color: white;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.description-content p {
+    margin-bottom: 20px;
+}
+
+.logo-section {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.track-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.track-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media screen and (min-width: 768px) {
+    .description-section {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .description-content {
+        flex: 2;
+    }
+
+    .logo-section {
+        flex: 1;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo-link img {
+        height: 40px;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    .content-wrapper {
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: clamp(32px, 6vw, 48px);
+        text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .description-content {
+        font-size: 16px;
+        text-align: justify;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .section {
     width: 100vw;
     height: 100vh;
     position: relative;
     z-index: 1;
-}
- 
-html,
-body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
 }
 
 #vanta-bg-home,
@@ -113,27 +289,6 @@ body {
 
 }
 
-.header {
-    position: fixed;
-    /* Fixed to make it stay at the top */
-    top: 0;
-    left: 0;
-    /* Aligns the header to the left of the page */
-    width: calc(100% - 17px);
-    /* Subtracts a bit from the width to avoid overlap with the scrollbar */
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Transparent white background */
-    backdrop-filter: blur(10px);
-    /* The blur effect */
-    -webkit-backdrop-filter: blur(10px);
-    /* For Safari */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Optional: shadow for better visual effect */
-    z-index: 1000;
-    padding: 42px 0;
-    /* Add some padding for spacing */
-}
-
 .header nav {
     z-index: 1001;
     position: fixed;
@@ -177,11 +332,6 @@ body {
     color: #a241d6;
 }
 
-
-
-
-
-
 .side {
     width: max-content;
     height: 1em;
@@ -201,8 +351,6 @@ body {
     transform: translate3d(0, 0, 1em);
 }
 
-
-
 .header img {
     width: 5.5%;
     z-index: 1;
@@ -210,13 +358,6 @@ body {
     left: 3%;
     top: 3%;
 }
-
-
-
-/* From Uiverse.io by andrew-demchenk0 */
-/* before adding the photo to the div with the "card-photo" class, in the css clear the styles for .card-photo and remove .card-photo::before and .card-photo::after, then set the desired styles for .card- photo. */
-
-
 
 @media (max-width: 800px) {
 
