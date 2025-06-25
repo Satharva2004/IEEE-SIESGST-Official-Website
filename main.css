@@ -1,15 +1,17 @@
 .section {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 #vanta-bg-home,
 #vanta-bg-events,
 #vanta-bg-gallery,
 #vanta-bg-contact,
-#vanta-bg-about {
+#vanta-bg-about,
+#vanta-bg-awards {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1859,4 +1861,192 @@
 .logo {
     width: auto;
     height: 100PX;
+}
+
+/* Awards Section Styling */
+#awards {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    padding: 80px 0;
+    background-color: #181818;
+    overflow-x: hidden;
+}
+
+.awards-title {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.awards-title h1 {
+    --font-color: #323232;
+    --bg-color: #fff;
+    --main-color: #404040;
+    font-size: clamp(80px, 20vw, 300px);
+    line-height: 1.2;
+    color: #ffff;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 600;
+    text-shadow: 8px 8px var(--main-color);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 40px 0;
+    letter-spacing: 4px;
+}
+
+.awards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.award-box {
+    background: #242424;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.3s ease;
+    box-shadow: 6px 6px 0 #404040;
+    margin: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.award-box:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 12px 12px 0 #404040;
+    background: #2a2a2a;
+}
+
+.award-image {
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.award-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.award-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.award-info h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.award-info p {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    font-family: "Readex Pro", sans-serif;
+}
+
+.award-details {
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    font-family: "Readex Pro", sans-serif;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    #awards {
+        padding: 60px 0 40px;
+    }
+
+    .awards-title {
+        margin-bottom: 30px;
+    }
+
+    .awards-title h1 {
+        font-size: clamp(50px, 15vw, 80px);
+        text-shadow: 6px 6px var(--main-color);
+        padding: 30px 0;
+        letter-spacing: 2px;
+    }
+
+    .awards-container {
+        padding: 0 10px;
+    }
+
+    .award-box {
+        flex-direction: column;
+        margin: 10px 5px;
+    }
+
+    .award-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .award-info {
+        padding: 15px;
+    }
+
+    .award-info h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .award-info p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .award-details {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    #awards {
+        padding: 40px 0 30px;
+    }
+
+    .awards-title h1 {
+        font-size: clamp(40px, 12vw, 60px);
+        text-shadow: 4px 4px var(--main-color);
+        padding: 20px 0;
+        letter-spacing: 1px;
+    }
+
+    .award-box {
+        margin: 10px 0;
+    }
+
+    .award-image {
+        height: 160px;
+    }
+
+    .award-info {
+        padding: 12px;
+    }
+
+    .award-info h3 {
+        font-size: 16px;
+    }
+
+    .award-info p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
 }

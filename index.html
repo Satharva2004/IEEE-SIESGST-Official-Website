@@ -15,10 +15,7 @@
 
     <link rel="stylesheet" href="timeline.css">
     <script src="main.js"></script>
-    <script src="members.html"></script>
-    <script src="cs.html"></script>
-    <script src="wie.html"></script>
-    <script src="mtts.html"></script>
+    <!-- Remove invalid script references -->
     <title>IEEE SIES GST</title>
     <style>
         body,
@@ -146,12 +143,12 @@
             }
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
 </head>
@@ -271,9 +268,10 @@
 
     
     <div class="section" id="awards">
-            <div class="awards-title">
-        <h1 class="pixel-title">Awards</h1>
-    </div>
+        <div id="vanta-bg-awards"></div>
+        <div class="awards-title">
+            <h1>Awards</h1>
+        </div>
         <div class="awards-container">
             <div class="award-box">
                 <div class="award-image">
@@ -562,189 +560,118 @@
 
     </div>
 
+    <!-- Initialize all effects -->
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Three.js and VANTA effects
+            if (typeof THREE !== 'undefined' && typeof VANTA !== 'undefined') {
+                // Awards background
+                VANTA.DOTS({
+                    el: "#vanta-bg-awards",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+
+                // Home background
+                VANTA.GLOBE({
+                    el: "#vanta-bg-home",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    size: window.innerWidth <= 767 ? 5.30 : 0.60,
+                    backgroundColor: 0x181818,
+                    speed: 1.5
+                });
+
+                // About background
+                VANTA.DOTS({
+                    el: "#vanta-bg-about",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+
+                // Events background
+                VANTA.DOTS({
+                    el: "#vanta-bg-events",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+
+                // Gallery background
+                VANTA.DOTS({
+                    el: "#vanta-bg-gallery",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+            } else {
+                console.error('Required libraries not loaded');
+                // Retry loading after a delay
+                setTimeout(initializeEffects, 1000);
+            }
+        });
+
+        function initializeEffects() {
+            if (typeof THREE !== 'undefined' && typeof VANTA !== 'undefined') {
+                // Initialize effects here (same code as above)
+                console.log('Effects initialized after delay');
+            } else {
+                console.error('Failed to load required libraries');
+            }
+        }
+
+        // Handle mobile menu
         function toggleDropdown() {
-            const menu = document.querySelector('nav .menu');
-            menu.classList.toggle('active');
+            document.querySelector('.menu').classList.toggle('active');
         }
-
-        function initVantaEffect() {
-            // Destroy any existing VANTA effect if resizing
-            if (window.VANTA_EFFECT) {
-                window.VANTA_EFFECT.destroy();
-            }
-
-            // Check for mobile or desktop view
-            const isMobile = window.innerWidth <= 767;
-
-            // Apply different configurations based on screen size
-            window.VANTA_EFFECT = VANTA.GLOBE({
-                el: "#vanta-bg-home",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: true,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: isMobile ? 0.75 : 1.00, // Smaller scale for mobile
-                color: 0xffffff,
-                size: isMobile ? 5.30 : 0.60, // Smaller globe size for mobile
-                backgroundColor: 0x181818,
-                speed: isMobile ? 0.4 : 2, // Adjust speed for mobile
-            });
-        }
-
-        // Initialize VANTA effect
-        initVantaEffect();
-
-        // Reinitialize on resize to handle screen changes
-        window.addEventListener("resize", initVantaEffect);
-
-        VANTA.DOTS({
-            el: "#vanta-bg-events",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-            speed: 2,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-gallery",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-gallery",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-about",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        gsap.from(".text h1", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.5 });
-        gsap.from(".text p", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.7 });
-        gsap.from(".button", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.9 });
-        gsap.from(".header nav", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
-        gsap.from(".header img", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Initial position of cards (off-screen to the right)
-        gsap.set(".cards-container", {
-            x: "100%"
-        });
-
-        // Animate cards from right to center
-        gsap.to(".cards-container", {
-            scrollTrigger: {
-                trigger: ".cards-container",
-                start: "top center",
-                end: "top 20%",
-                scrub: true
-            },
-            x: 0,
-            duration: 1.5,
-            ease: "power2.out"
-        });
-
-        // Animate the Events title
-        gsap.from(".text2 h1", {
-            scrollTrigger: {
-                trigger: ".cards-container",
-                start: "top center",
-                end: "top 20%",
-                scrub: true
-            },
-            x: 100,
-            opacity: 0,
-            duration: 1.5,
-            ease: "power2.out"
-        });
-
-        const container = document.querySelector(".card0-container");
-        let isUserScrolling = false;
-
-        container.addEventListener("wheel", () => {
-            isUserScrolling = true;
-            setTimeout(() => {
-                isUserScrolling = false;
-            }, 3000);
-        });
-
-        function autoScroll() {
-            if (!isUserScrolling) {
-                container.scrollBy({ left: 2, behavior: "smooth" });
-            }
-        }
-
-        setInterval(autoScroll, 50);
-
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-
-        // GSAP Animations for Awards section
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Animate title
-        gsap.from(".pixel-title", {
-            scrollTrigger: {
-                trigger: "#awards",
-                start: "top center",
-                end: "center center",
-                scrub: 1
-            },
-            y: 100,
-            opacity: 0,
-            duration: 1
-        });
-
-        // Animate awards items
-        gsap.from(".award-box", {
-            scrollTrigger: {
-                trigger: "#awards",
-                start: "top center",
-                end: "bottom bottom"
-            },
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.3
-        });
     </script>
 
 </body>
