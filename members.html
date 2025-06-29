@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Readex+Pro:wght@160..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="memebers.css">
+    <link rel="stylesheet" href="members-mobile.css">
     <script src="main.js"></script>
     <title>IEEE SIES GST</title>
     <style>
@@ -36,9 +37,8 @@
 
 <body>
 <!-- <img src="members-25/Mam.png" alt="ph"> -->
-    <div class="section" id="members.html">
-
-        <div id="vanta-bg-events"></div>
+    <div class="section" id="members">
+        <div id="vanta-bg"></div>
         <div class="text">
             <h1>Our Team Members</h1>
             <p>"Meet Our IEEE Behind The Scene Members"</p>
@@ -272,103 +272,37 @@
     </div>
 
     <!-- <button class="button">
-            <a href="#events">Let’s go →</a>
+            <a href="#events">Let's go →</a>
         </button> -->
 
 
 
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize VANTA background
+            VANTA.DOTS({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 0.75,
+                color: 0xffffff,
+                color2: 0x181818,
+                backgroundColor: 0x181818,
+                size: 3,
+                spacing: 35,
+                showLines: false
+            });
 
-        VANTA.GLOBE({
-            el: "#vanta-bg-home",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0xffffff,
-            size: 0.60,
-            backgroundColor: 0x181818,
-            speed: 2,
-        });
-
-        VANTA.DOTS({
-            el: "#vanta-bg-events",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-            speed: 2,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-gallery",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-gallery",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        VANTA.DOTS({
-            el: "#vanta-bg-about",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 0.7,
-            scaleMobile: 1.00,
-            color: 0xf2f2f2,
-            color2: 0x181818,
-            backgroundColor: 0x181818,
-        });
-        gsap.from(".text h1", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.5 });
-        gsap.from(".text p", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.7 });
-        gsap.from(".button", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.9 });
-        gsap.from(".header nav", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
-        gsap.from(".header img", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 1.1 });
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.to(".cards - container", {
-            scrollTrigger: {
-                trigger: ".cards - container",
-                scrub: true
-            },
-            x: 500,
-        });
-        gsap.to(".text2 h1", {
-            scrollTrigger: {
-                trigger: ".cards - container",
-                scrub: true
-            },
-            x: 500,
-            y: 50
+            // GSAP animations
+            gsap.from(".text h1", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.5 });
+            gsap.from(".text p", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.7 });
+            gsap.from(".grid-container", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", delay: 0.9 });
+            gsap.from(".header", { duration: 1.5, y: -50, opacity: 0, ease: "power3.out", delay: 1.1 });
         });
     </script>
 

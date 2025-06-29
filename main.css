@@ -330,8 +330,8 @@
 }
 
 .card:hover .card__title::after,
-.card1:hover .card__title::after,
-.card2:hover .card__title::after {
+.card1:hover .card1__title::after,
+.card2:hover .card2__title::after {
     transform: translateX(0);
 }
 
@@ -459,16 +459,34 @@
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
+    height: 100%;
 }
 
 .scroll-container {
     display: flex;
-    gap: 10px;
+    gap: 30px;
+    height: 100%;
+    padding: 20px 0;
     animation: scroll 20s linear infinite;
 }
 
 .scroll-container:hover {
     animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.card0-container:hover {
+    animation-play-state: paused;
+    /* Pause on hover */
 }
 
 .card0-container {
@@ -486,21 +504,6 @@
     position: relative;
     animation: slide 30s linear infinite;
     /* Add animation */
-}
-
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-.card0-container:hover {
-    animation-play-state: paused;
-    /* Pause on hover */
 }
 
 .card0,
@@ -527,7 +530,8 @@
     /* Ensure cards don't get too small */
 }
 
-/* Rest of your existing CSS remains unchanged */
+
+
 .card0_form img,
 .card01_form img,
 .card02_form img,
@@ -569,6 +573,7 @@
     font-style: normal;
 }
 
+/* Restore original hover effects and card data styling */
 .card0:hover .card0_form span,
 .card01:hover .card01_form span,
 .card02:hover .card02_form span,
@@ -1646,8 +1651,8 @@
     }
 
     .card:hover .card__title::after,
-    .card1:hover .card__title::after,
-    .card2:hover .card__title::after {
+    .card1:hover .card1__title::after,
+    .card2:hover .card2__title::after {
         transform: translateX(0);
     }
 
@@ -2048,5 +2053,97 @@
     .award-info p {
         font-size: 13px;
         line-height: 1.3;
+    }
+}
+
+.logo-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: translateY(-10px);
+}
+
+.logo-text {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: "Readex Pro", sans-serif;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-link:hover .logo-text {
+    opacity: 1;
+    visibility: visible;
+    bottom: -50px;
+}
+
+/* Better Gallery Scrollbar */
+.card0-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.card0-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.card0-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.card0-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Smooth scrolling for gallery */
+.card0-container {
+    scroll-behavior: smooth;
+}
+
+/* Gallery responsive improvements */
+@media (max-width: 768px) {
+    .card0-container {
+        height: 60vh;
+        padding: 20px 10px;
+    }
+    
+    .card0,
+    .card01,
+    .card02,
+    .card03,
+    .card04,
+    .card05,
+    .card06 {
+        flex: 0 0 280px;
+        height: 400px;
+        min-width: 280px;
+    }
+    
+    .card0_form img,
+    .card01_form img,
+    .card02_form img,
+    .card03_form img,
+    .card04_form img,
+    .card05_form img,
+    .card06_form img {
+        height: 150px;
     }
 }
