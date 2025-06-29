@@ -1169,13 +1169,11 @@
 @media only screen and (max-width: 800px) {
     .text h1 {
         font-size: clamp(15rem, 90vw, 20rem);
-        /* Better relative line height */
         margin: 0;
         padding: 0;
         white-space: nowrap;
         position: absolute;
         top: 40%;
-        /* Adjusted down slightly */
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
@@ -1186,25 +1184,21 @@
     }
 
     .text p {
-        font-size: clamp(24px, 25vw, 36px);
-        line-height: 0.5;
-        /* Better readability */
+        font-size: clamp(24px, 5vw, 36px);
+        line-height: 1.2;
         letter-spacing: 2px;
         color: #fff;
         position: absolute;
-        top: 50%;
-        /* Positioned below h1 */
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: "Jersey 10", sans-serif;
         font-weight: 100;
         text-align: center;
         margin: 0;
-        padding: 0;
-        width: 90%;
-        /* Prevents text from stretching too wide */
+        padding: 0 20px;
+        width: 100%;
         max-width: 800px;
-        /* Optional: Limits paragraph width */
     }
 
     .button {
