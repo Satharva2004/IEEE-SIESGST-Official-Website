@@ -53,10 +53,12 @@
         .awards-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
             display: flex;
-            flex-direction: column;
-            gap: 30px;
+            flex-direction: row;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .award-box {
@@ -64,7 +66,11 @@
             border-radius: 10px;
             overflow: hidden;
             display: flex;
+            flex-direction: column;
             transition: transform 0.3s ease;
+            flex: 1;
+            max-width: 360px;
+            min-width: 320px;
         }
 
         .award-box:hover {
@@ -72,15 +78,21 @@
         }
 
         .award-image {
-            width: 300px;
-            height: 200px;
+            width: 100%;
+            height: 250px;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            padding: 10px;
         }
 
         .award-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            border-radius: 5px;
         }
 
         .award-info {
@@ -111,12 +123,21 @@
         }
 
         @media (max-width: 768px) {
+            .awards-container {
+                flex-direction: column;
+                padding: 0 10px;
+            }
+
             .award-box {
                 flex-direction: column;
+                max-width: none;
+                min-width: auto;
+                margin: 10px 0;
             }
 
             .award-image {
                 width: 100%;
+                height: 200px;
             }
 
             .awards-title h1 {
@@ -320,6 +341,179 @@
                 cursor: auto !important;
             }
         }
+
+        /* Scroll Down Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: bounce 2s infinite;
+            z-index: 10;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-indicator p {
+            color: #ffffff;
+            font-size: 14px;
+            margin: 10px 0 0 0;
+            font-family: 'Readex Pro', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .scroll-indicator svg {
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .scroll-indicator:hover svg {
+            opacity: 1;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .scroll-indicator {
+                bottom: 20px;
+            }
+            .scroll-indicator p {
+                font-size: 12px;
+            }
+            .scroll-indicator svg {
+                width: 25px;
+                height: 40px;
+            }
+        }
+
+        /* FAQ Section Styles */
+        #vanta-bg-faq {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        #faq {
+            position: relative;
+            min-height: 100vh;
+            background-color: #181818;
+        }
+
+        .faq-item {
+            background: rgba(0, 0, 0, 0.95);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .faq-item:hover {
+            background: rgba(20, 20, 20, 0.98);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            background: rgba(30, 30, 30, 0.95);
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Readex Pro', sans-serif;
+            flex: 1;
+        }
+
+        .faq-toggle {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            margin-left: 15px;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: rgba(15, 15, 15, 0.98);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 20px;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            color: #cccccc;
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: 'Readex Pro', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 0 15px;
+            }
+
+            .faq-question {
+                padding: 15px;
+            }
+
+            .faq-question h3 {
+                font-size: 16px;
+            }
+
+            .faq-answer p {
+                font-size: 14px;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 15px;
+            }
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
@@ -337,7 +531,7 @@
     <div class="cursor-outline"></div>
 
     <header class="header">
-        <a href="#home"><img src="IEEE SIESGST_white.png" alt="alt"></a>
+        <a href="#" onclick="location.reload()"><img src="IEEE SIESGST_white.png" alt="IEEE SIES GST Logo"></a>
         <nav>
             <div class="menu-toggle" onclick="toggleDropdown()">☰</div>
             <ul class="menu">
@@ -346,6 +540,7 @@
                 <li><a href="#events">Events</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="members.html">Members</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -357,7 +552,16 @@
             <h1>I E E E</h1>
             <p>IEEE SIES GST Student body academic year 2025.</p>
         </div>
-        <button class="button" onclick="scrollToEvents()">Let's go</button>
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator" onclick="scrollToAbout()">
+            <svg width="30" height="50" viewBox="0 0 30 50">
+                <rect x="8" y="8" width="14" height="28" rx="7" ry="7" stroke="#ffffff" stroke-width="2" fill="none"/>
+                <circle cx="15" cy="15" r="2" fill="#ffffff">
+                    <animate attributeName="cy" values="15;25;15" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+            <p>Scroll Down</p>
+        </div>
     </div>
     <div class="section" id="about-us">
         <div id="vanta-bg-about"></div>
@@ -499,7 +703,7 @@
         <div id="vanta-bg-gallery"></div>
         <div class="text4">
             <h1>Gallery</h1>
-            <p>Recent event, webinars, seminar, meetups and many more!<br><br>*Click to know more</p>
+            <p>Recent event, webinars, seminar, meetups and many more!<br><br></p>
             <!-- <p>Everything we do!</p> -->
         </div>
         <div class="gallery-wrapper">
@@ -654,6 +858,95 @@
     </div>
     </div>
 
+    <div class="section" id="faq">
+        <div id="vanta-bg-faq"></div>
+        <div class="text2">
+            <h1>FAQ</h1>
+            <p>Frequently Asked Questions</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is IEEE SIES GST?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>IEEE SIES GST is the student branch of the Institute of Electrical and Electronics Engineers at SIES Graduate School of Technology. We are dedicated to fostering technological innovation, professional development, and academic excellence among students.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I become a member of IEEE SIES GST?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can join IEEE SIES GST by attending our membership drives or contacting us directly. Membership is open to all students interested in engineering, technology, and innovation. We conduct regular membership drives at the beginning of each academic year.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What are the sub-chapters under IEEE SIES GST?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>IEEE SIES GST has three active sub-chapters: Computer Society (CS), Microwave Theory and Techniques Society (MTT-S), and Women in Engineering (WiE). Each sub-chapter focuses on specific domains and organizes specialized events and workshops.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What kind of events does IEEE SIES GST organize?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We organize various technical and non-technical events including Techopedia (our flagship event), Epsilon (international conference), workshops, seminars, webinars, coding competitions, and networking sessions with industry professionals.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What are the benefits of joining IEEE SIES GST?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Members gain access to exclusive workshops, networking opportunities, leadership roles, skill development programs, IEEE digital library, industry connections, certificate courses, and the chance to participate in organizing major technical events.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I participate in IEEE SIES GST events?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can participate by following our social media channels, joining our WhatsApp groups, or visiting our website for event announcements. Most events are open to all students, while some may require prior registration.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is Techopedia?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Techopedia is our flagship annual technical festival featuring workshops, competitions, and exhibitions. It includes our signature competition "Vendetta" and attracts participants from various colleges, celebrating innovation and technical excellence.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I contact IEEE SIES GST?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can reach us at ieee@siesgst.ac.in, follow us on our social media platforms, or visit us at SIES Graduate School of Technology, Nerul, Navi Mumbai. Check our Linktree for all social media links: https://linktr.ee/ieeesiesgst</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="section" id="contact">
         <div class="text5">
             <h1>Contact Us</h1>
@@ -789,11 +1082,58 @@
                 cursorOutline.style.opacity = '1';
             });
 
+            // Initialize FAQ functionality
+            initializeFAQ();
+
+            // Debug and ensure FAQ background
+            setTimeout(() => {
+                const faqElement = document.querySelector('#faq');
+                const faqBgElement = document.querySelector('#vanta-bg-faq');
+                console.log('FAQ Section Element:', faqElement);
+                console.log('FAQ Background Element:', faqBgElement);
+                
+                // Force FAQ background if not working
+                if (faqBgElement && typeof VANTA !== 'undefined') {
+                    try {
+                        VANTA.DOTS({
+                            el: "#vanta-bg-faq",
+                            mouseControls: true,
+                            touchControls: true,
+                            gyroControls: false,
+                            minHeight: 200.00,
+                            minWidth: 200.00,
+                            scale: 1.00,
+                            scaleMobile: 0.75,
+                            color: 0xffffff,
+                            color2: 0x181818,
+                            backgroundColor: 0x181818,
+                            size: 3,
+                            spacing: 35,
+                            showLines: false
+                        });
+                        console.log('FAQ background force-initialized');
+                    } catch (error) {
+                        console.error('Force FAQ background error:', error);
+                    }
+                }
+            }, 1000);
+
             // Function to scroll to events section
             window.scrollToEvents = function() {
                 const eventsSection = document.getElementById('events');
                 if (eventsSection) {
                     eventsSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            };
+
+            // Function to scroll to about section
+            window.scrollToAbout = function() {
+                const aboutSection = document.getElementById('about-us');
+                if (aboutSection) {
+                    aboutSection.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
@@ -909,6 +1249,39 @@
                     spacing: 35,
                     showLines: false
                 });
+
+                // FAQ background with error handling
+                setTimeout(() => {
+                    try {
+                        const faqBgElement = document.querySelector("#vanta-bg-faq");
+                        if (faqBgElement) {
+                            VANTA.DOTS({
+                                el: "#vanta-bg-faq",
+                                mouseControls: true,
+                                touchControls: true,
+                                gyroControls: false,
+                                minHeight: 200.00,
+                                minWidth: 200.00,
+                                scale: 1.00,
+                                scaleMobile: 0.75,
+                                color: 0xffffff,
+                                color2: 0x181818,
+                                backgroundColor: 0x181818,
+                                size: 3,
+                                spacing: 35,
+                                showLines: false
+                            });
+                        }
+                    } catch (error) {
+                        console.error('Error initializing FAQ background:', error);
+                    }
+                }, 100);
+
+                // Initialize GSAP ScrollTrigger
+                gsap.registerPlugin(ScrollTrigger);
+
+                // GSAP Animations
+                initializeGSAPAnimations();
             } else {
                 console.error('Required libraries not loaded');
                 // Retry loading after a delay
@@ -918,7 +1291,128 @@
 
         function initializeEffects() {
             if (typeof THREE !== 'undefined' && typeof VANTA !== 'undefined') {
-                // Initialize effects here (same code as above)
+                // Initialize VANTA effects here
+                // Awards background
+                VANTA.DOTS({
+                    el: "#vanta-bg-awards",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+
+                // Home background
+                VANTA.GLOBE({
+                    el: "#vanta-bg-home",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    size: window.innerWidth <= 767 ? 5.30 : 0.60,
+                    backgroundColor: 0x181818,
+                    speed: 1.5
+                });
+
+                // About background
+                VANTA.DOTS({
+                    el: "#vanta-bg-about",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+
+                // Events background
+                VANTA.DOTS({
+                    el: "#vanta-bg-events",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+
+                // Gallery background
+                VANTA.DOTS({
+                    el: "#vanta-bg-gallery",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 0.75,
+                    color: 0xffffff,
+                    color2: 0x181818,
+                    backgroundColor: 0x181818,
+                    size: 3,
+                    spacing: 35,
+                    showLines: false
+                });
+
+                // FAQ background with error handling (fallback)
+                setTimeout(() => {
+                    try {
+                        const faqBgElement = document.querySelector("#vanta-bg-faq");
+                        if (faqBgElement) {
+                            VANTA.DOTS({
+                                el: "#vanta-bg-faq",
+                                mouseControls: true,
+                                touchControls: true,
+                                gyroControls: false,
+                                minHeight: 200.00,
+                                minWidth: 200.00,
+                                scale: 1.00,
+                                scaleMobile: 0.75,
+                                color: 0xffffff,
+                                color2: 0x181818,
+                                backgroundColor: 0x181818,
+                                size: 3,
+                                spacing: 35,
+                                showLines: false
+                            });
+                        }
+                    } catch (error) {
+                        console.error('Error initializing FAQ background (fallback):', error);
+                    }
+                }, 200);
+
+                // Initialize GSAP ScrollTrigger
+                if (typeof gsap !== 'undefined') {
+                    gsap.registerPlugin(ScrollTrigger);
+                    initializeGSAPAnimations();
+                }
+                
                 console.log('Effects initialized after delay');
             } else {
                 console.error('Failed to load required libraries');
@@ -928,6 +1422,259 @@
         // Handle mobile menu
         function toggleDropdown() {
             document.querySelector('.menu').classList.toggle('active');
+        }
+
+        // FAQ Toggle Functionality
+        function initializeFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isActive) {
+                        item.classList.remove('active');
+                    } else {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // GSAP Animation Initialization
+        function initializeGSAPAnimations() {
+            // Set initial states for all animated elements
+            gsap.set([
+                '.text h1', '.text p', 
+                '.text2 h1', '.text2 p', 
+                '.text3 h1', '.text3 p', 
+                '.text4 h1', '.text4 p', 
+                '.text5 h1',
+                '.cards-container .card', '.cards-container .card1', '.cards-container .card2',
+                '.container .logos',
+                '.awards-container .award-box',
+                '.card0-container .card0', '.card0-container .card01', '.card0-container .card02', 
+                '.card0-container .card03', '.card0-container .card04', '.card0-container .card05',
+                '.faq-container .faq-item',
+                '.footer'
+            ], {
+                opacity: 0,
+                y: 50
+            });
+
+            // Home section animations
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#home",
+                    start: "top center",
+                    end: "bottom center",
+                    toggleActions: "play none none reverse"
+                }
+            })
+            .to('.text h1', { 
+                duration: 1, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            })
+            .to('.text p', { 
+                duration: 0.8, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            }, "-=0.5");
+
+            // About section animations
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#about-us",
+                    start: "top 80%",
+                    end: "bottom center",
+                    toggleActions: "play none none reverse"
+                }
+            })
+            .to('.text3 h1', { 
+                duration: 1, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            })
+            .to('.text3 p', { 
+                duration: 0.8, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            }, "-=0.5")
+            .to('.container .logos', { 
+                duration: 0.6, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out",
+                stagger: 0.2
+            }, "-=0.3");
+
+            // Events section animations
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#events",
+                    start: "top 80%",
+                    end: "bottom center",
+                    toggleActions: "play none none reverse"
+                }
+            })
+            .to('.text2 h1', { 
+                duration: 1, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            })
+            .to('.text2 p', { 
+                duration: 0.8, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            }, "-=0.5")
+            .to(['.cards-container .card', '.cards-container .card1', '.cards-container .card2'], { 
+                duration: 0.8, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out",
+                stagger: 0.2
+            }, "-=0.3");
+
+            // Awards section animations
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#awards",
+                    start: "top 80%",
+                    end: "bottom center",
+                    toggleActions: "play none none reverse"
+                }
+            })
+            .to('#awards .text2 h1', { 
+                duration: 1, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            })
+            .to('.awards-container .award-box', { 
+                duration: 0.8, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out",
+                stagger: 0.3
+            }, "-=0.3");
+
+            // Gallery section animations
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#gallery",
+                    start: "top 80%",
+                    end: "bottom center",
+                    toggleActions: "play none none reverse"
+                }
+            })
+            .to('.text4 h1', { 
+                duration: 1, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            })
+            .to('.text4 p', { 
+                duration: 0.8, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            }, "-=0.5")
+            .to([
+                '.card0-container .card0', '.card0-container .card01', '.card0-container .card02', 
+                '.card0-container .card03', '.card0-container .card04', '.card0-container .card05'
+            ], { 
+                duration: 0.6, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out",
+                stagger: 0.1
+            }, "-=0.3");
+
+            // FAQ section animations
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#faq",
+                    start: "top 80%",
+                    end: "bottom center",
+                    toggleActions: "play none none reverse"
+                }
+            })
+            .to('#faq .text2 h1', { 
+                duration: 1, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            })
+            .to('#faq .text2 p', { 
+                duration: 0.8, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            }, "-=0.5")
+            .to('.faq-container .faq-item', { 
+                duration: 0.6, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out",
+                stagger: 0.1
+            }, "-=0.3");
+
+            // Contact section animations
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#contact",
+                    start: "top 80%",
+                    end: "bottom center",
+                    toggleActions: "play none none reverse"
+                }
+            })
+            .to('.text5 h1', { 
+                duration: 1, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            })
+            .to('.footer', { 
+                duration: 0.8, 
+                opacity: 1, 
+                y: 0, 
+                ease: "power2.out" 
+            }, "-=0.5");
+
+            // Additional mobile-friendly settings
+            if (window.innerWidth <= 768) {
+                // Reduce animation duration for mobile
+                gsap.globalTimeline.timeScale(1.5);
+                
+                // Update ScrollTrigger refresh on mobile orientation change
+                window.addEventListener('orientationchange', () => {
+                    setTimeout(() => {
+                        ScrollTrigger.refresh();
+                    }, 500);
+                });
+            }
+
+            // Refresh ScrollTrigger on window resize
+            window.addEventListener('resize', () => {
+                ScrollTrigger.refresh();
+            });
         }
     </script>
 
